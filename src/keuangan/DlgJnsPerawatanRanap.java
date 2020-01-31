@@ -64,9 +64,9 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         setSize(628,674);
 
         Object[] row={"P","Kode Tindakan","Nama Tnd/Prw/Tagihan","Kategori",
-                      "J.S.Rumah Sakit","BHP/Paket Obat","J.Medis Dr",
-                      "J.Medis Pr","KSO","Menejemen","Ttl Biaya Dr",
-                      "Ttl Biaya Pr","Ttl Biaya Dr & Pr","Jenis Bayar",
+                      "JS RS","JTL","JM Pelaks.",
+                      "JM Asist.","KSO","Struktural","Ttl Biaya Pelaks.",
+                      "Ttl Biaya Asist.","Ttl Biaya","Jenis Bayar",
                       "Kamar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
@@ -347,7 +347,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Tarif Tindakan/Perawatan/Tagihan Rawat Inap ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Tarif Tindakan/Perawatan/Tagihan Rawat Inap ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -637,7 +637,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(jLabel9);
         jLabel9.setBounds(402, 72, 120, 23);
 
-        jLabel10.setText("Total Biaya Dokter : Rp.");
+        jLabel10.setText("Total Biaya Pelaksana : Rp.");
         jLabel10.setName("jLabel10"); // NOI18N
         FormInput.add(jLabel10);
         jLabel10.setBounds(4, 222, 155, 23);
@@ -653,7 +653,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(TJmlDr);
         TJmlDr.setBounds(162, 222, 200, 23);
 
-        jLabel11.setText("Total Biaya Pr : Rp.");
+        jLabel11.setText("Total Biaya Asisten : Rp.");
         jLabel11.setName("jLabel11"); // NOI18N
         FormInput.add(jLabel11);
         jLabel11.setBounds(381, 162, 141, 23);
@@ -708,12 +708,12 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(TTndDr);
         TTndDr.setBounds(162, 192, 200, 23);
 
-        jLabel12.setText("Jasa Medis Dokter : Rp.");
+        jLabel12.setText("Jasa Medis Pelaksana : Rp.");
         jLabel12.setName("jLabel12"); // NOI18N
         FormInput.add(jLabel12);
         jLabel12.setBounds(4, 192, 155, 23);
 
-        jLabel13.setText("Jasa Medis Pr : Rp.");
+        jLabel13.setText("Jasa Medis Asisten : Rp.");
         jLabel13.setName("jLabel13"); // NOI18N
         FormInput.add(jLabel13);
         jLabel13.setBounds(381, 132, 141, 23);
@@ -793,7 +793,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(btnBayar);
         btnBayar.setBounds(698, 42, 28, 23);
 
-        jLabel14.setText("Total Biaya Dokter & Pr : Rp.");
+        jLabel14.setText("Total Biaya : Rp.");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(372, 192, 150, 23);
@@ -810,7 +810,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(TJmlDrPr);
         TJmlDrPr.setBounds(525, 192, 200, 23);
 
-        jLabel15.setText("BHP Medis/Paket Obat : Rp.");
+        jLabel15.setText("Jasa Tidak Langsung : Rp.");
         jLabel15.setName("jLabel15"); // NOI18N
         FormInput.add(jLabel15);
         jLabel15.setBounds(4, 132, 155, 23);
@@ -827,7 +827,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(BhpMedis);
         BhpMedis.setBounds(162, 132, 200, 23);
 
-        jLabel17.setText("Menejemen : Rp.");
+        jLabel17.setText("Jasa Struktural : Rp.");
         jLabel17.setName("jLabel17"); // NOI18N
         FormInput.add(jLabel17);
         jLabel17.setBounds(412, 102, 110, 23);

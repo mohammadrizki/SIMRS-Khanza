@@ -65,15 +65,15 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         Object[] row={"P","Kode Tindakan",
                       "Nama Tnd/Prw/Tagihan",
                       "Kategori",
-                      "J.S.Rmh Sakit",
-                      "BHP/Paket Obat",
-                      "J.Medis Dr",
-                      "J.Medis Pr",
+                      "JS RS",
+                      "JTL",
+                      "JM Pelaks.",
+                      "JM Asist.",
                       "KSO",
-                      "Menejemen",
-                      "Ttl Biaya Dr",
-                      "Ttl Biaya Pr",
-                      "Ttl Biaya Dr & Pr",
+                      "Struktural",
+                      "Ttl Biaya Pelaks.",
+                      "Ttl Biaya Asist.",
+                      "Ttl Biaya",
                       "Jenis Bayar",
                       "Unit/Poli"};
         tabMode=new DefaultTableModel(null,row){
@@ -350,7 +350,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Tarif Tindakan/Perawatan/Tagihan Rawat Jalan]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Tarif Tindakan/Perawatan/Tagihan Rawat Jalan]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -640,7 +640,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(jLabel9);
         jLabel9.setBounds(412, 72, 110, 23);
 
-        jLabel10.setText("Total Biaya Dokter : Rp.");
+        jLabel10.setText("Total Biaya Pelaksana : Rp.");
         jLabel10.setName("jLabel10"); // NOI18N
         FormInput.add(jLabel10);
         jLabel10.setBounds(4, 192, 155, 23);
@@ -657,7 +657,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(TJmlDr);
         TJmlDr.setBounds(162, 192, 200, 23);
 
-        jLabel11.setText("Total Biaya Pr : Rp.");
+        jLabel11.setText("Total Biaya Asisten : Rp.");
         jLabel11.setName("jLabel11"); // NOI18N
         FormInput.add(jLabel11);
         jLabel11.setBounds(392, 162, 130, 23);
@@ -719,12 +719,12 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(TTndDr);
         TTndDr.setBounds(162, 162, 200, 23);
 
-        jLabel12.setText("Jasa Medis Dokter : Rp.");
+        jLabel12.setText("Jasa Medis Pelaksana : Rp.");
         jLabel12.setName("jLabel12"); // NOI18N
         FormInput.add(jLabel12);
         jLabel12.setBounds(4, 162, 155, 23);
 
-        jLabel13.setText("Jasa Medis Pr : Rp.");
+        jLabel13.setText("Jasa Medis Asisten : Rp.");
         jLabel13.setName("jLabel13"); // NOI18N
         FormInput.add(jLabel13);
         jLabel13.setBounds(392, 132, 130, 23);
@@ -807,7 +807,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(BtnPenjab);
         BtnPenjab.setBounds(698, 42, 28, 23);
 
-        jLabel14.setText("Total Biaya Dokter & Pr : Rp.");
+        jLabel14.setText("Total Biaya : Rp.");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(372, 192, 150, 23);
@@ -836,7 +836,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(BhpMedis);
         BhpMedis.setBounds(162, 102, 200, 23);
 
-        jLabel15.setText("BHP Medis/Paket Obat : Rp.");
+        jLabel15.setText("Jasa Tidak Langsung : Rp.");
         jLabel15.setName("jLabel15"); // NOI18N
         FormInput.add(jLabel15);
         jLabel15.setBounds(4, 102, 155, 23);
@@ -862,6 +862,11 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         Menejemen.setToolTipText("Tekan ENTER untuk lanjut ke field berikutnya, tekan PAGE UP untuk ke field sebelumnya, hanya bisa angka");
         Menejemen.setHighlighter(null);
         Menejemen.setName("Menejemen"); // NOI18N
+        Menejemen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenejemenActionPerformed(evt);
+            }
+        });
         Menejemen.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 MenejemenKeyPressed(evt);
@@ -870,7 +875,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(Menejemen);
         Menejemen.setBounds(525, 102, 200, 23);
 
-        jLabel17.setText("Menejemen : Rp.");
+        jLabel17.setText("Jasa Struktural : Rp.");
         jLabel17.setName("jLabel17"); // NOI18N
         FormInput.add(jLabel17);
         jLabel17.setBounds(412, 102, 110, 23);
@@ -1310,6 +1315,10 @@ private void BtnPenjabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
             }         
         }
     }//GEN-LAST:event_tbJnsPerawatanKeyReleased
+
+    private void MenejemenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenejemenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenejemenActionPerformed
 
     /**
     * @param args the command line arguments
