@@ -1037,7 +1037,7 @@ public final class RMPenilaianAwalKeperawatanRalan extends javax.swing.JDialog {
         Alergi.setBounds(179, 290, 260, 23);
 
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel43.setText("2. Apakah nafsu makan berkurang karena tidak nafsu makan ?");
+        jLabel43.setText("2. Apakah konsumsi makanan berkurang karena tidak nafsu makan?");
         jLabel43.setName("jLabel43"); // NOI18N
         FormInput.add(jLabel43);
         jLabel43.setBounds(40, 740, 460, 23);
@@ -1422,7 +1422,7 @@ public final class RMPenilaianAwalKeperawatanRalan extends javax.swing.JDialog {
         FormInput.add(jLabel67);
         jLabel67.setBounds(700, 880, 50, 23);
 
-        Hasil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tidak beresiko (tidak ditemukan a dan b)", "Resiko rendah (ditemukan a/b)", "Resiko tinggi (ditemukan a dan b)" }));
+        Hasil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tidak berisiko (tidak ditemukan a dan b)", "Resiko rendah (ditemukan a/b)", "Resiko tinggi (ditemukan a dan b)" }));
         Hasil.setName("Hasil"); // NOI18N
         Hasil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1953,7 +1953,7 @@ public final class RMPenilaianAwalKeperawatanRalan extends javax.swing.JDialog {
         jLabel97.setBounds(369, 660, 190, 23);
 
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel63.setText("VI. PENILAIAN RESIKO JATUH");
+        jLabel63.setText("VI. PENILAIAN RISIKO JATUH");
         jLabel63.setName("jLabel63"); // NOI18N
         FormInput.add(jLabel63);
         jLabel63.setBounds(10, 560, 380, 23);

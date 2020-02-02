@@ -339,7 +339,7 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="1">
-                        <StringItem index="0" value="01-02-2020"/>
+                        <StringItem index="0" value="02-02-2020"/>
                       </StringArray>
                     </Property>
                     <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy"/>
@@ -367,7 +367,7 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="1">
-                        <StringItem index="0" value="01-02-2020"/>
+                        <StringItem index="0" value="02-02-2020"/>
                       </StringArray>
                     </Property>
                     <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy"/>
@@ -1018,7 +1018,7 @@
                     <Component class="widget.Label" name="jLabel43">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="2"/>
-                        <Property name="text" type="java.lang.String" value="2. Apakah nafsu makan berkurang karena tidak nafsu makan ?"/>
+                        <Property name="text" type="java.lang.String" value="2. Apakah konsumsi makanan berkurang karena tidak nafsu makan?"/>
                         <Property name="name" type="java.lang.String" value="jLabel43" noResource="true"/>
                       </Properties>
                       <Constraints>
@@ -1671,7 +1671,7 @@
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="3">
-                            <StringItem index="0" value="Tidak beresiko (tidak ditemukan a dan b)"/>
+                            <StringItem index="0" value="Tidak berisiko (tidak ditemukan a dan b)"/>
                             <StringItem index="1" value="Resiko rendah (ditemukan a/b)"/>
                             <StringItem index="2" value="Resiko tinggi (ditemukan a dan b)"/>
                           </StringArray>
@@ -2351,7 +2351,7 @@
                         </Property>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="1">
-                            <StringItem index="0" value="01-02-2020 16:31:00"/>
+                            <StringItem index="0" value="02-02-2020 20:10:40"/>
                           </StringArray>
                         </Property>
                         <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy HH:mm:ss"/>
@@ -2555,7 +2555,7 @@
                     <Component class="widget.Label" name="jLabel63">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="2"/>
-                        <Property name="text" type="java.lang.String" value="VI. PENILAIAN RESIKO JATUH"/>
+                        <Property name="text" type="java.lang.String" value="VI. PENILAIAN RISIKO JATUH"/>
                         <Property name="name" type="java.lang.String" value="jLabel63" noResource="true"/>
                       </Properties>
                       <Constraints>
