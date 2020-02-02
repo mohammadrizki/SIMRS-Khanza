@@ -159,7 +159,7 @@ public final class DlgBangsal extends javax.swing.JDialog {
         jPopupMenu1.setName("jPopupMenu1"); // NOI18N
 
         MnRestore.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnRestore.setForeground(new java.awt.Color(70, 70, 70));
+        MnRestore.setForeground(new java.awt.Color(50, 50, 50));
         MnRestore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnRestore.setText("Data Sampah");
         MnRestore.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
