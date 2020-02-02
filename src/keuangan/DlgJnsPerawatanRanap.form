@@ -505,7 +505,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel9">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="J.S. Rumah Sakit : Rp."/>
+                    <Property name="text" type="java.lang.String" value="JS Rumah Sakit : Rp."/>
                     <Property name="name" type="java.lang.String" value="jLabel9" noResource="true"/>
                   </Properties>
                   <Constraints>
@@ -776,7 +776,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel14">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Total Biaya : Rp."/>
+                    <Property name="text" type="java.lang.String" value="Tarif : Rp."/>
                     <Property name="name" type="java.lang.String" value="jLabel14" noResource="true"/>
                   </Properties>
                   <Constraints>
@@ -881,7 +881,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel16">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="K.S.O. : Rp."/>
+                    <Property name="text" type="java.lang.String" value="KSO. : Rp."/>
                     <Property name="name" type="java.lang.String" value="jLabel16" noResource="true"/>
                   </Properties>
                   <Constraints>

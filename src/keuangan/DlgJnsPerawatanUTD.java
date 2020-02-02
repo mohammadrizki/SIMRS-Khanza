@@ -51,7 +51,7 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
         this.setLocation(8,1);
         setSize(628,674);
 
-        Object[] row={"P","Kode Periksa","Nama Pelayanan","J.S.Rumah Sakit","Paket BHP","J.M.Perujuk","J.M. Dokter","J.M. Petugas","K.S.O.","Menejemen","Total Tarif","Jenis Bayar"};
+        Object[] row={"P","Kode Periksa","Nama Pelayanan","JS RS","JTL","JM Perujuk","JM Dokter","JM Petugas","KSO","Struktural","Tarif","Jenis Bayar"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -270,7 +270,7 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Tarif Pelayanan Unit Tranfusi Darah ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Tarif Pelayanan Unit Tranfusi Darah ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -534,12 +534,12 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
         FormInput.add(BagianRs);
         BagianRs.setBounds(127, 42, 170, 23);
 
-        jLabel9.setText("J.S. Rumah Sakit : Rp.");
+        jLabel9.setText("JS Rumah Sakit : Rp.");
         jLabel9.setName("jLabel9"); // NOI18N
         FormInput.add(jLabel9);
         jLabel9.setBounds(-10, 42, 135, 23);
 
-        jLabel11.setText("Total Biaya UTD : Rp. ");
+        jLabel11.setText("Tarif : Rp. ");
         jLabel11.setName("jLabel11"); // NOI18N
         FormInput.add(jLabel11);
         jLabel11.setBounds(300, 102, 153, 23);
@@ -555,7 +555,7 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
         FormInput.add(TotalBiaya);
         TotalBiaya.setBounds(453, 102, 263, 23);
 
-        jLabel13.setText("J.M. Petugas : Rp.");
+        jLabel13.setText("JM Petugas : Rp.");
         jLabel13.setName("jLabel13"); // NOI18N
         FormInput.add(jLabel13);
         jLabel13.setBounds(-10, 132, 135, 23);
@@ -603,7 +603,7 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
         FormInput.add(btnPj);
         btnPj.setBounds(688, 132, 28, 23);
 
-        jLabel10.setText("J.M. Dokter : Rp.");
+        jLabel10.setText("JM Dokter : Rp.");
         jLabel10.setName("jLabel10"); // NOI18N
         FormInput.add(jLabel10);
         jLabel10.setBounds(-10, 102, 135, 23);
@@ -630,12 +630,12 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
         FormInput.add(JMPerujuk);
         JMPerujuk.setBounds(127, 162, 170, 23);
 
-        jLabel12.setText("J.M. Perujuk : Rp. ");
+        jLabel12.setText("JM Perujuk : Rp. ");
         jLabel12.setName("jLabel12"); // NOI18N
         FormInput.add(jLabel12);
         jLabel12.setBounds(-10, 162, 135, 23);
 
-        jLabel14.setText("Paket BHP : Rp.");
+        jLabel14.setText("JTL : Rp.");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(-10, 72, 135, 23);
@@ -673,12 +673,12 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
         FormInput.add(Menejemen);
         Menejemen.setBounds(453, 72, 170, 23);
 
-        jLabel15.setText("K.S.O : Rp. ");
+        jLabel15.setText("KSO : Rp. ");
         jLabel15.setName("jLabel15"); // NOI18N
         FormInput.add(jLabel15);
         jLabel15.setBounds(300, 42, 153, 23);
 
-        jLabel16.setText("Menejemen : Rp. ");
+        jLabel16.setText("Struktural : Rp. ");
         jLabel16.setName("jLabel16"); // NOI18N
         FormInput.add(jLabel16);
         jLabel16.setBounds(300, 72, 153, 23);
@@ -722,14 +722,20 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
 }//GEN-LAST:event_TNmKeyPressed
 
     private void BagianRsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BagianRsKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            isjml();
-        }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            isjml();
-            Bhp.requestFocus();
-        }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
-            isjml();
-            TNm.requestFocus();
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                isjml();
+                break;
+            case KeyEvent.VK_ENTER:
+                isjml();
+                Bhp.requestFocus();
+                break;
+            case KeyEvent.VK_PAGE_UP:
+                isjml();
+                TNm.requestFocus();
+                break;
+            default:
+                break;
         }
 }//GEN-LAST:event_BagianRsKeyPressed
 
@@ -738,14 +744,20 @@ public final class DlgJnsPerawatanUTD extends javax.swing.JDialog {
 }//GEN-LAST:event_TotalBiayaKeyPressed
 
     private void JMLaboratKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JMLaboratKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            isjml();
-        }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            isjml();
-            JMPerujuk.requestFocus();
-        }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
-            isjml();
-            JMDokter.requestFocus();
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                isjml();
+                break;
+            case KeyEvent.VK_ENTER:
+                isjml();
+                JMPerujuk.requestFocus();
+                break;
+            case KeyEvent.VK_PAGE_UP:
+                isjml();
+                JMDokter.requestFocus();
+                break;
+            default:
+                break;
         }
 }//GEN-LAST:event_JMLaboratKeyPressed
 

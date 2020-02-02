@@ -51,9 +51,9 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         setSize(628,674);
 
         Object[] row={
-            "P","Kode Periksa","Nama Pemeriksaan","J.S. RS",
-            "Paket BHP","J.M. Perujuk","J.M. Dokter","J.M. Petugas",
-            "K.S.O.","Menejemen","Total Tarif","Jenis Bayar","Kelas"};
+            "P","Kode Periksa","Nama Pemeriksaan","JS RS",
+            "JTL","JM Perujuk","JM Dokter","JM Petugas",
+            "KSO","Struktural","Tarif","Jenis Bayar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
@@ -246,7 +246,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Tarif Pemeriksaan Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Tarif Pemeriksaan Laboratorium ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -505,7 +505,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         FormInput.add(jLabel9);
         jLabel9.setBounds(-10, 42, 135, 23);
 
-        jLabel11.setText("Total Biaya Laborat : Rp. ");
+        jLabel11.setText("Tarif : Rp. ");
         jLabel11.setName("jLabel11"); // NOI18N
         FormInput.add(jLabel11);
         jLabel11.setBounds(300, 102, 153, 23);
@@ -557,7 +557,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         FormInput.add(jLabel12);
         jLabel12.setBounds(-10, 162, 135, 23);
 
-        jLabel14.setText("Paket BHP : Rp.");
+        jLabel14.setText("Jasa Tdk Langsung : Rp.");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(-10, 72, 135, 23);
@@ -644,7 +644,7 @@ public final class DlgJnsPerawatanLab extends javax.swing.JDialog {
         FormInput.add(KSO);
         KSO.setBounds(453, 42, 170, 23);
 
-        jLabel16.setText("Menejemen : Rp. ");
+        jLabel16.setText("Struktural : Rp. ");
         jLabel16.setName("jLabel16"); // NOI18N
         FormInput.add(jLabel16);
         jLabel16.setBounds(300, 72, 153, 23);

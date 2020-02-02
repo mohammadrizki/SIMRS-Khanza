@@ -499,7 +499,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel11">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Total Biaya Laborat : Rp. "/>
+                    <Property name="text" type="java.lang.String" value="Tarif : Rp. "/>
                     <Property name="name" type="java.lang.String" value="jLabel11" noResource="true"/>
                   </Properties>
                   <Constraints>
@@ -599,7 +599,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel14">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Paket BHP : Rp."/>
+                    <Property name="text" type="java.lang.String" value="Jasa Tdk Langsung : Rp."/>
                     <Property name="name" type="java.lang.String" value="jLabel14" noResource="true"/>
                   </Properties>
                   <Constraints>
@@ -740,7 +740,7 @@
                 </Component>
                 <Component class="widget.Label" name="jLabel16">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Menejemen : Rp. "/>
+                    <Property name="text" type="java.lang.String" value="Struktural : Rp. "/>
                     <Property name="name" type="java.lang.String" value="jLabel16" noResource="true"/>
                   </Properties>
                   <Constraints>

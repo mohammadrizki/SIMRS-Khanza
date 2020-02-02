@@ -66,7 +66,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         Object[] row={"P","Kode Tindakan","Nama Tnd/Prw/Tagihan","Kategori",
                       "JS RS","JTL","JM Pelaks.",
                       "JM Asist.","KSO","Struktural","Ttl Biaya Pelaks.",
-                      "Ttl Biaya Asist.","Ttl Biaya","Jenis Bayar",
+                      "Ttl Biaya Asist.","Tarif","Jenis Bayar",
                       "Kamar","Kelas"};
         tabMode=new DefaultTableModel(null,row){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
@@ -632,7 +632,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(BagianRs);
         BagianRs.setBounds(525, 72, 200, 23);
 
-        jLabel9.setText("J.S. Rumah Sakit : Rp.");
+        jLabel9.setText("JS Rumah Sakit : Rp.");
         jLabel9.setName("jLabel9"); // NOI18N
         FormInput.add(jLabel9);
         jLabel9.setBounds(402, 72, 120, 23);
@@ -793,7 +793,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(btnBayar);
         btnBayar.setBounds(698, 42, 28, 23);
 
-        jLabel14.setText("Total Biaya : Rp.");
+        jLabel14.setText("Tarif : Rp.");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(372, 192, 150, 23);
@@ -856,7 +856,7 @@ public final class DlgJnsPerawatanRanap extends javax.swing.JDialog {
         FormInput.add(KSO);
         KSO.setBounds(162, 162, 200, 23);
 
-        jLabel16.setText("K.S.O. : Rp.");
+        jLabel16.setText("KSO. : Rp.");
         jLabel16.setName("jLabel16"); // NOI18N
         FormInput.add(jLabel16);
         jLabel16.setBounds(4, 162, 155, 23);

@@ -73,7 +73,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
                       "Struktural",
                       "Ttl Biaya Pelaks.",
                       "Ttl Biaya Asist.",
-                      "Ttl Biaya",
+                      "Tarif",
                       "Jenis Bayar",
                       "Unit/Poli"};
         tabMode=new DefaultTableModel(null,row){
@@ -807,7 +807,7 @@ public final class DlgJnsPerawatanRalan extends javax.swing.JDialog {
         FormInput.add(BtnPenjab);
         BtnPenjab.setBounds(698, 42, 28, 23);
 
-        jLabel14.setText("Total Biaya : Rp.");
+        jLabel14.setText("Tarif : Rp.");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(372, 192, 150, 23);
