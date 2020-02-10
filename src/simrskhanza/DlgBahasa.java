@@ -42,7 +42,8 @@ public class DlgBahasa extends javax.swing.JDialog {
 
     /** Creates new form Dlgbahasa_pasien
      * @param parent
-     * @param modal */
+     * @param modal 
+     */
     public DlgBahasa(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
