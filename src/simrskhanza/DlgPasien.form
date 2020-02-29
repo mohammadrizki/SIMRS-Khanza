@@ -2606,7 +2606,7 @@
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="1">
-                                <StringItem index="0" value="12-02-2020"/>
+                                <StringItem index="0" value="29-02-2020"/>
                               </StringArray>
                             </Property>
                             <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy"/>
@@ -2826,7 +2826,7 @@
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="1">
-                                <StringItem index="0" value="12-02-2020"/>
+                                <StringItem index="0" value="29-02-2020"/>
                               </StringArray>
                             </Property>
                             <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy"/>
@@ -3139,7 +3139,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="855" y="185" width="28" height="23"/>
+                              <AbsoluteConstraints x="820" y="185" width="28" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3298,7 +3298,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="790" y="360" width="130" height="23"/>
+                              <AbsoluteConstraints x="690" y="360" width="130" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3316,7 +3316,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="960" y="360" width="28" height="23"/>
+                              <AbsoluteConstraints x="820" y="360" width="28" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3353,7 +3353,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="750" y="390" width="28" height="23"/>
+                              <AbsoluteConstraints x="630" y="390" width="28" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -3371,7 +3371,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="750" y="360" width="28" height="23"/>
+                              <AbsoluteConstraints x="630" y="360" width="28" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -4051,7 +4051,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="855" y="215" width="28" height="23"/>
+                              <AbsoluteConstraints x="820" y="215" width="28" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -4089,7 +4089,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="790" y="390" width="130" height="23"/>
+                              <AbsoluteConstraints x="690" y="390" width="130" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -4107,7 +4107,7 @@
                           </Events>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="960" y="390" width="28" height="23"/>
+                              <AbsoluteConstraints x="820" y="390" width="28" height="23"/>
                             </Constraint>
                           </Constraints>
                         </Component>

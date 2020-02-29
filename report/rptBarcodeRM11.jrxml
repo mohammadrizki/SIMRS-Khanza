@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="155" pageHeight="56" columnWidth="149" leftMargin="3" rightMargin="3" topMargin="3" bottomMargin="3">
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="155" pageHeight="56" columnWidth="149" leftMargin="3" rightMargin="3" topMargin="3" bottomMargin="3" uuid="9323c65e-b432-4084-8977-fd2aa88f6ba7">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -89,24 +90,26 @@ and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab]]>
 	<title>
 		<band height="50">
 			<textField pattern="">
-				<reportElement mode="Opaque" x="109" y="1" width="40" height="29"/>
-				<textElement verticalAlignment="Top" lineSpacing="Single">
+				<reportElement mode="Opaque" x="109" y="1" width="40" height="29" uuid="2dff75eb-b2b0-467b-8102-15df08939e77"/>
+				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="10" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{no_rkm_medis}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{no_rkm_medis}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement x="0" y="33" width="140" height="17"/>
+				<reportElement x="0" y="33" width="140" height="17" uuid="e601757e-5818-4d26-b15b-c2106032d286"/>
 				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barHeight="30">
 					<jr:codeExpression><![CDATA[$F{no_rkm_medis}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
 			<textField pattern="">
-				<reportElement mode="Opaque" x="5" y="1" width="104" height="29"/>
-				<textElement verticalAlignment="Top" lineSpacing="Single">
+				<reportElement mode="Opaque" x="5" y="1" width="104" height="29" uuid="becc1036-137a-4d92-a510-ff70aac7d081"/>
+				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="10" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_pasien}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{nm_pasien}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>

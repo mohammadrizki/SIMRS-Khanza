@@ -61,7 +61,7 @@ public final class DlgPeriksaRadiologi extends javax.swing.JDialog {
     private DlgCariDokter dokter=new DlgCariDokter(null,false);
     private PreparedStatement psset_tarif,pssetpj,pspemeriksaan,pspemeriksaan2,pspemeriksaan3,pspemeriksaan4,psbhp,psrekening;
     private ResultSet rs,rsset_tarif,rssetpj,rsrekening,rs2;
-    private boolean[] pilih; 
+    private boolean[] pilih;
     private String[] kode,nama,kodebarang,namabarang,satuan,pproyeksi,pkV,pmAS,pFFD,pBSF,pinak,pjml_penyinaran,pdosis;
     private double[] jumlah,total,bagian_rs,bhp,tarif_perujuk,tarif_tindakan_dokter,tarif_tindakan_petugas,kso,menejemen;
     private int jml=0,i=0,index=0,jmlparsial=0;
@@ -1296,7 +1296,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                 simpan();
             }else{
                 if(Sequel.cariRegistrasi(TNoRw.getText())>0){
-                    JOptionPane.showMessageDialog(rootPane,"Data billing sudah terverifikasi, data tidak boleh dihapus.\nSilahkan hubungi bagian kasir/keuangan ..!!");
+                    JOptionPane.showMessageDialog(rootPane,"Data billing sudah terverifikasi, data tidak boleh dihapus.\nSilakan hubungi bagian kasir/keuangan ..!!");
                     TCariPeriksa.requestFocus();
                 }else{
                     simpan();
@@ -1383,7 +1383,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
             pemeriksaan="";
             for(i=0;i<tbPemeriksaan.getRowCount();i++){
                 if(tbPemeriksaan.getValueAt(i,0).toString().equals("true")){
-                    pemeriksaan=tbPemeriksaan.getValueAt(i,2).toString()+" dengan Proyeksi : "+tbPemeriksaan.getValueAt(i,11).toString()+", kV : "+tbPemeriksaan.getValueAt(i,12).toString()+", mAS : "+tbPemeriksaan.getValueAt(i,13).toString()+", FFD : "+tbPemeriksaan.getValueAt(i,14).toString()+", BSF : "+tbPemeriksaan.getValueAt(i,15).toString()+", Inak : "+tbPemeriksaan.getValueAt(i,16).toString()+", Jml Penyinaran : "+tbPemeriksaan.getValueAt(i,17).toString()+", Dosis Radiasi : "+tbPemeriksaan.getValueAt(i,18).toString()+", "+pemeriksaan;
+                    pemeriksaan=tbPemeriksaan.getValueAt(i,2).toString()+" dengan proyeksi "+tbPemeriksaan.getValueAt(i,11).toString()+", kV : "+tbPemeriksaan.getValueAt(i,12).toString()+", mAS : "+tbPemeriksaan.getValueAt(i,13).toString()+", FFD : "+tbPemeriksaan.getValueAt(i,14).toString()+", BSF : "+tbPemeriksaan.getValueAt(i,15).toString()+", Inak : "+tbPemeriksaan.getValueAt(i,16).toString()+", Jml Penyinaran : "+tbPemeriksaan.getValueAt(i,17).toString()+", Dosis Radiasi : "+tbPemeriksaan.getValueAt(i,18).toString()+", "+pemeriksaan;
                 }
             }
             Map<String, Object> param = new HashMap<>();
@@ -1413,7 +1413,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
             param.put("finger",Sequel.cariIsi("select sha1(sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",KodePj.getText()));
             param.put("finger2",Sequel.cariIsi("select sha1(sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",KdPtg.getText()));
 
-            pilihan = (String)JOptionPane.showInputDialog(null,"Silahkan pilih hasil pemeriksaan..!","Hasil Pemeriksaan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Model 1","Model 2", "Model 3"},"Model 1");
+            pilihan = (String)JOptionPane.showInputDialog(null,"Silakan pilih hasil pemeriksaan!","Hasil Pemeriksaan",JOptionPane.QUESTION_MESSAGE,null,new Object[]{"Model 1","Model 2", "Model 3"},"Model 1");
             switch (pilihan) {
                 case "Model 1":
                       Valid.MyReport("rptPeriksaRadiologi.jasper","report","::[ Pemeriksaan Radiologi ]::",param);
@@ -2006,8 +2006,8 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                     " permintaan_pemeriksaan_radiologi.noorder=? order by jns_perawatan_radiologi.kd_jenis_prw");
             try {
                 pspemeriksaan.setString(1,order);
-                rs=pspemeriksaan.executeQuery();                
-                while(rs.next()){                
+                rs=pspemeriksaan.executeQuery();
+                while(rs.next()){
                     tabMode.addRow(new Object[]{true,rs.getString(1),rs.getString(2),rs.getDouble(3),rs.getDouble(4),rs.getDouble(5),rs.getDouble(6),rs.getDouble(7),rs.getDouble(8),rs.getDouble(9),rs.getDouble(10),"","","","","","","",""});
                 }
             } catch (Exception e) {
@@ -2024,8 +2024,8 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
             System.out.println("Notifikasi 2 : "+e);
         }
     }
-    
-    public void tampilFuji(String order) {         
+
+    public void tampilFuji(String order) {
         try{
             koneksiradiologi=koneksiDBFUJI.condb();
             pspemeriksaan=koneksi.prepareStatement(
@@ -2035,11 +2035,11 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                     "jns_perawatan_radiologi.kso,jns_perawatan_radiologi.menejemen,penjab.png_jawab "+
                     "from jns_perawatan_radiologi inner join penjab inner join permintaan_pemeriksaan_radiologi "+
                     " on penjab.kd_pj=jns_perawatan_radiologi.kd_pj and jns_perawatan_radiologi.kd_jenis_prw=permintaan_pemeriksaan_radiologi.kd_jenis_prw where "+
-                    " permintaan_pemeriksaan_radiologi.noorder=? order by jns_perawatan_radiologi.kd_jenis_prw");            
+                    " permintaan_pemeriksaan_radiologi.noorder=? order by jns_perawatan_radiologi.kd_jenis_prw");
             try {
                 pspemeriksaan.setString(1,order);
-                rs=pspemeriksaan.executeQuery();                
-                while(rs.next()){      
+                rs=pspemeriksaan.executeQuery();
+                while(rs.next()){
                     pspemeriksaan2=koneksiradiologi.prepareStatement(
                             "select proyeksi, kV, mAS, FFD, BSF, inak, jml_penyinaran, dosis from order_out where kode_tindakan=? and no_rontgen=?");
                     try {
@@ -2066,7 +2066,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                         }
                     }
                 }
-                
+
                 pspemeriksaan2=koneksiradiologi.prepareStatement(
                         "select expertise_finding, expertise_conclusion, expertise_bookmark from order_out where no_rontgen=?");
                 try {
@@ -2100,7 +2100,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
             System.out.println("Notifikasi 2 : "+e);
         }
     }
-    
+
     public void setOrder(String order,String norawat,String posisi){
         noorder=order;
         TNoRw.setText(norawat);
@@ -2130,7 +2130,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
         isPsien();
         tampil(order);
     }
-    
+
     public void setOrderFuji(String order,String norawat,String posisi){
         noorder=order;
         TNoRw.setText(norawat);
@@ -2138,7 +2138,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
         isRawat2();
         try {
             pssetpj=koneksi.prepareStatement("select * from set_pjlab");
-            try {                              
+            try {
                 rssetpj=pssetpj.executeQuery();
                 while(rssetpj.next()){
                     KodePj.setText(rssetpj.getString(2));
@@ -2153,7 +2153,7 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
                 if(pssetpj!=null){
                     pssetpj.close();
                 }
-            }              
+            }
         } catch (Exception e) {
             System.out.println(e);
         }

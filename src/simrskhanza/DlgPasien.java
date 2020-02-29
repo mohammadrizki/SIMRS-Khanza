@@ -3370,7 +3370,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnKecamatan);
-        BtnKecamatan.setBounds(855, 185, 28, 23);
+        BtnKecamatan.setBounds(820, 185, 28, 23);
 
         BtnKabupaten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnKabupaten.setMnemonic('4');
@@ -3481,7 +3481,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(KecamatanPj);
-        KecamatanPj.setBounds(790, 360, 130, 23);
+        KecamatanPj.setBounds(690, 360, 130, 23);
 
         BtnKecamatanPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnKecamatanPj.setMnemonic('3');
@@ -3493,7 +3493,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnKecamatanPj);
-        BtnKecamatanPj.setBounds(960, 360, 28, 23);
+        BtnKecamatanPj.setBounds(820, 360, 28, 23);
 
         KabupatenPj.setText("KABUPATEN");
         KabupatenPj.setHighlighter(null);
@@ -3526,7 +3526,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnKabupatenPj);
-        BtnKabupatenPj.setBounds(750, 390, 28, 23);
+        BtnKabupatenPj.setBounds(630, 390, 28, 23);
 
         BtnKelurahanPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnKelurahanPj.setMnemonic('2');
@@ -3538,7 +3538,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnKelurahanPj);
-        BtnKelurahanPj.setBounds(750, 360, 28, 23);
+        BtnKelurahanPj.setBounds(630, 360, 28, 23);
 
         KelurahanPj.setText("KELURAHAN");
         KelurahanPj.setHighlighter(null);
@@ -3960,7 +3960,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnPropinsi);
-        BtnPropinsi.setBounds(855, 215, 28, 23);
+        BtnPropinsi.setBounds(820, 215, 28, 23);
 
         Propinsi.setText("PROPINSI");
         Propinsi.setHighlighter(null);
@@ -4002,7 +4002,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(PropinsiPj);
-        PropinsiPj.setBounds(790, 390, 130, 23);
+        PropinsiPj.setBounds(690, 390, 130, 23);
 
         btnPropinsiPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         btnPropinsiPj.setMnemonic('4');
@@ -4014,7 +4014,7 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         FormInput.add(btnPropinsiPj);
-        btnPropinsiPj.setBounds(960, 390, 28, 23);
+        btnPropinsiPj.setBounds(820, 390, 28, 23);
 
         jLabel38.setText("Cacat Fisik :");
         jLabel38.setName("jLabel38"); // NOI18N
