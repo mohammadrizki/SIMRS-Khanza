@@ -274,7 +274,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
 
         tabModePemeriksaan=new DefaultTableModel(null,new Object[]{
             "P","No.Rawat","No.R.M.","Nama Pasien","Tgl.Rawat","Jam Rawat","Suhu(C)","Tensi","Nadi(/menit)",
-            "Respirasi(/menit)","Tinggi(Cm)","Berat(Kg)","GCS(E,V,M)","Keluhan","Pemeriksaan","Alergi","Penilaian","Tindak Lanjut"}){
+            "Respirasi(/menit)","Tinggi(Cm)","Berat(Kg)","GCS(E,V,M)","Keluhan","Pemeriksaan","Alergi","Penilaian","Tindak Lanjut","Nama Petugas"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){
                 boolean a = false;
                 if (colIndex==0) {
@@ -288,7 +288,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                  java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class,
                  java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class,
                  java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class,
-                 java.lang.Object.class, java.lang.Object.class
+                 java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
              };
              @Override
              public Class getColumnClass(int columnIndex) {
@@ -299,7 +299,7 @@ public final class DlgRawatInap extends javax.swing.JDialog {
         tbPemeriksaan.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbPemeriksaan.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 18; i++) {
+        for (i = 0; i < 19; i++) {
             TableColumn column = tbPemeriksaan.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(20);
@@ -336,6 +336,8 @@ public final class DlgRawatInap extends javax.swing.JDialog {
             }else if(i==16){
                 column.setPreferredWidth(180);
             }else if(i==17){
+                column.setPreferredWidth(180);
+            }else if(i==18){
                 column.setPreferredWidth(180);
             }
         }
@@ -3450,11 +3452,11 @@ public final class DlgRawatInap extends javax.swing.JDialog {
                             (!TBerat.getText().trim().equals(""))||(!TRespirasi.getText().trim().equals(""))||
                             (!TNadi.getText().trim().equals(""))||(!TGCS.getText().trim().equals(""))||
                             (!TPenilaian.getText().trim().equals(""))||(!TindakLanjut.getText().trim().equals(""))){
-                        Sequel.menyimpan("pemeriksaan_ranap","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","Data",15,new String[]{
+                        Sequel.menyimpan("pemeriksaan_ranap","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","Data",16,new String[]{
                             TNoRw.getText(),Valid.SetTgl(DTPTgl.getSelectedItem()+""),cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem(),
                             TSuhu.getText(),TTensi.getText(),TNadi.getText(),TRespirasi.getText(),TTinggi.getText(),
                             TBerat.getText(),TGCS.getText(),TKeluhan.getText(),TPemeriksaan.getText(),TAlergi.getText(),
-                            TPenilaian.getText(),TindakLanjut.getText()
+                            TPenilaian.getText(),TindakLanjut.getText(),akses.getkode()
                         });
                         tampilPemeriksaan();
                         BtnBatalActionPerformed(evt);
@@ -4357,7 +4359,7 @@ private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                     }   break;
                 case 3:
                     if(TKeluhan.getText().trim().equals("")&&TPemeriksaan.getText().trim().equals("")&&TPenilaian.getText().trim().equals("")&&TSuhu.getText().trim().equals("")&&TTensi.getText().trim().equals("")){
-                        Valid.textKosong(TKeluhan,"Hasil Periksa/Perkambangan/Suhu Badan/Tensi");
+                        Valid.textKosong(TKeluhan,"Hasil Periksa/Perkembangan/Suhu Badan/Tensi");
                     }else{
                         if(tbPemeriksaan.getSelectedRow()>-1){
                             Sequel.mengedit("pemeriksaan_ranap","no_rawat='"+tbPemeriksaan.getValueAt(tbPemeriksaan.getSelectedRow(),1)+
@@ -5358,8 +5360,8 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
         if(BtnMonitoringAsuhanGizi.isVisible()==true){
             tinggitombol=tinggitombol+23;
         }
-        
-        if(PanelAccor.getHeight()<(tinggitombol+20)){   
+
+        if(PanelAccor.getHeight()<(tinggitombol+20)){
             ScrollMenu.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
             ScrollMenu.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
             FormMenu.setPreferredSize(new Dimension(120,(tinggitombol+20)));
@@ -5373,7 +5375,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
         if(TNoRw.getText().trim().equals("")){
             JOptionPane.showMessageDialog(null,"Maaf, silakan Anda pilih dulu dengan mengklik data pada table...!!!");
             TCari.requestFocus();
-        }else{ 
+        }else{
             this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
             RMDataMonitoringAsuhanGizi form=new RMDataMonitoringAsuhanGizi(null,false);
             form.isCek();
