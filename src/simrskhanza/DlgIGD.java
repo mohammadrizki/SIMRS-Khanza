@@ -522,7 +522,7 @@ public final class DlgIGD extends javax.swing.JDialog {
 
         try {
             IPPRINTERTRACER=koneksiDB.IPPRINTERTRACER();
-            URUTNOREG=koneksiDB.URUTNOREG();            
+            URUTNOREG=koneksiDB.URUTNOREG();
             aktifkanparsial=koneksiDB.AKTIFKANBILLINGPARSIAL();
             ps3=koneksi.prepareStatement("select * from poliklinik where kd_poli='IGDK'");
             try {
@@ -3663,7 +3663,7 @@ public final class DlgIGD extends javax.swing.JDialog {
         pasien.satuantni.dispose();
         pasien.suku.dispose();
         dokter.dispose();
-        rujukmasuk.WindowPerujuk.dispose();   
+        rujukmasuk.WindowPerujuk.dispose();
         DlgSakit2.dispose();
         DlgDemografi.dispose();
         DlgCatatan.dispose();
@@ -3717,7 +3717,7 @@ public final class DlgIGD extends javax.swing.JDialog {
                     JOptionPane.showMessageDialog(rootPane,"Data billing sudah terverifikasi, data tidak boleh diubah.\nSilahkan hubungi bagian kasir/keuangan ..!!");
                     TCari.requestFocus();
                 }else{
-                    
+
                 }
                 if(akses.getedit_registrasi()==true){
                     Sequel.queryu2("update reg_periksa set no_rawat=?,no_reg=?,tgl_registrasi=?,jam_reg=?,kd_dokter=?,no_rkm_medis=?,kd_poli=?,"+
@@ -3734,13 +3734,7 @@ public final class DlgIGD extends javax.swing.JDialog {
                     JOptionPane.showMessageDialog(rootPane,"Maaf hak akses anda dibatasi, silahkan konfirmasi kepada admin..!!! ");
                     TCari.requestFocus();
                 }
-<<<<<<< HEAD
-                tampil();
-                emptTeks();
             }
-=======
-            }                
->>>>>>> upstream/master
         }
 }//GEN-LAST:event_BtnEditActionPerformed
 
@@ -3874,7 +3868,7 @@ private void kddokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
 
 private void BtnDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokterActionPerformed
         akses.setform("DlgIGD");
-        dokter.isCek();        
+        dokter.isCek();
         dokter.TCari.requestFocus();
         dokter.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
         dokter.setLocationRelativeTo(internalFrame1);
@@ -3899,7 +3893,7 @@ private void MnKamarInapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
                     dlgki.setLocationRelativeTo(internalFrame1);
                     dlgki.emptTeks();
                     dlgki.isCek();
-                    dlgki.setNoRm(TNoRw.getText(),TNoRM.getText(),TPasien.getText());   
+                    dlgki.setNoRm(TNoRw.getText(),TNoRM.getText(),TPasien.getText());
                     dlgki.setVisible(true);
                 }
             }

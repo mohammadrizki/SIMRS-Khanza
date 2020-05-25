@@ -98,7 +98,7 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                     }
                 }
             });
-        }  
+        }
         LoadHTML.setEditable(true);
         HTMLEditorKit kit = new HTMLEditorKit();
         LoadHTML.setEditorKit(kit);
@@ -112,9 +112,9 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
         );
         Document doc = kit.createDefaultDocument();
         LoadHTML.setDocument(doc);
-    }    
-    
-     
+    }
+
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -156,11 +156,7 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-<<<<<<< HEAD
         internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Pembayaran Per Akun Bayar 3 ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
-=======
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Pembayaran Per Akun Bayar 3 ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
->>>>>>> upstream/master
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -388,8 +384,8 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
 
     private void BtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPrintActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        try {            
-            File g = new File("fileakunbayar.css");            
+        try {
+            File g = new File("fileakunbayar.css");
             BufferedWriter bg = new BufferedWriter(new FileWriter(g));
             bg.write(
                 ".isi td{border-right: 1px solid #e2e7dd;font: 8.5px tahoma;height:12px;border-bottom: 1px solid #e2e7dd;background: #ffffff;color:#323232;}"+
@@ -399,9 +395,9 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                 ".isi4 td{font: 11px tahoma;height:12px;background: #ffffff;color:#323232;}"
             );
             bg.close();
-            
-            File f = new File("PembayaranPerAkunBayar.html");            
-            BufferedWriter bw = new BufferedWriter(new FileWriter(f));            
+
+            File f = new File("PembayaranPerAkunBayar.html");
+            BufferedWriter bw = new BufferedWriter(new FileWriter(f));
             bw.write(LoadHTML.getText().replaceAll("<head>","<head><link href=\"fileakunbayar.css\" rel=\"stylesheet\" type=\"text/css\" />"+
                         "<table width='100%' border='0' align='center' cellpadding='3px' cellspacing='0' class='tbl_form'>"+
                             "<tr class='isi2'>"+
@@ -409,17 +405,17 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                                     "<font size='4' face='Tahoma'>"+akses.getnamars()+"</font><br>"+
                                     akses.getalamatrs()+", "+akses.getkabupatenrs()+", "+akses.getpropinsirs()+"<br>"+
                                     akses.getkontakrs()+", E-mail : "+akses.getemailrs()+"<br><br>"+
-                                    "<font size='2' face='Tahoma'>PEMBAYARAN PER AKUN BAYAR<br>TANGGAL "+Tgl1.getSelectedItem()+" "+CmbJam.getSelectedItem()+":"+CmbMenit.getSelectedItem()+":"+CmbDetik.getSelectedItem()+" s.d. "+Tgl2.getSelectedItem()+" "+CmbJam2.getSelectedItem()+":"+CmbMenit2.getSelectedItem()+":"+CmbDetik2.getSelectedItem()+"<br><br></font>"+        
+                                    "<font size='2' face='Tahoma'>PEMBAYARAN PER AKUN BAYAR<br>TANGGAL "+Tgl1.getSelectedItem()+" "+CmbJam.getSelectedItem()+":"+CmbMenit.getSelectedItem()+":"+CmbDetik.getSelectedItem()+" s.d. "+Tgl2.getSelectedItem()+" "+CmbJam2.getSelectedItem()+":"+CmbMenit2.getSelectedItem()+":"+CmbDetik2.getSelectedItem()+"<br><br></font>"+
                                 "</td>"+
                            "</tr>"+
                         "</table>")
             );
-            bw.close();                         
+            bw.close();
             Desktop.getDesktop().browse(f.toURI());
         } catch (Exception e) {
             System.out.println("Notifikasi : "+e);
-        }     
-        
+        }
+
         this.setCursor(Cursor.getDefaultCursor());
 }//GEN-LAST:event_BtnPrintActionPerformed
 
@@ -552,10 +548,10 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     private void tampil(){
-        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR)); 
-        try{        
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        try{
             htmlContent = new StringBuilder();
-            htmlContent.append(                             
+            htmlContent.append(
                 "<tr class='head'>"+
                     "<td valign='middle' bgcolor='#FFFAF8' align='center' width='27px'>No.</td>"+
                     "<td valign='middle' bgcolor='#FFFAF8' align='center' width='110px'>Tanggal</td>"+
@@ -565,8 +561,8 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                     "<td valign='middle' bgcolor='#FFFAF8' align='center' width='130px'>Petugas</td>"+
                     "<td valign='middle' bgcolor='#FFFAF8' align='center' width='400px'>Akun Bayar</td>"+
                 "</tr>"
-            );   
-            
+            );
+
             kolom=0;
             akunbayar=new String[Sequel.cariInteger("select count(nama_bayar) from akun_bayar")];
             psakunbayar=koneksi.prepareStatement("select nama_bayar from akun_bayar order by nama_bayar");
@@ -587,9 +583,9 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                     psakunbayar.close();
                 }
             }
-            
-            totalbayar=new double[kolom]; 
-            
+
+            totalbayar=new double[kolom];
+
             all=0;
             ps= koneksi.prepareStatement(
                     "select no_nota,tgl_bayar,nama_pasien,jumlah_bayar,petugas from tagihan_sadewa "+
@@ -604,7 +600,7 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                 ps.setString(6,"%"+TCari.getText().trim()+"%");
                 rs=ps.executeQuery();
                 no=1;
-                while(rs.next()){                            
+                while(rs.next()){
                     petugas=rs.getString("petugas")+" "+Sequel.cariIsi("select nama from pegawai where nik=?",rs.getString("petugas"));
                     norawatinap="";
                     norawatjalan="";
@@ -628,12 +624,12 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                                 }else{
                                     nopemasukanlain="";
                                 }
-                            }                                            
+                            }
                         }
                     }
                     if(petugas.toLowerCase().trim().contains(User.getText().toLowerCase().trim())){
                         all=all+rs.getDouble("jumlah_bayar");
-                        htmlContent.append(                             
+                        htmlContent.append(
                             "<tr class='isi'>"+
                                 "<td valign='middle' align='center'>"+no+"</td>"+
                                 "<td valign='middle' align='center'>"+rs.getString("tgl_bayar")+"</td>"+
@@ -661,13 +657,13 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                             }
                             totalbayar[i]=totalbayar[i]+bayar;
                         }
-                        htmlContent.append( 
+                        htmlContent.append(
                                     "</table>"+
                                 "</td>"+
                             "</tr>"
-                        ); 
-                    }          
-                    no++;                            
+                        );
+                    }
+                    no++;
                 }
             } catch (Exception e) {
                 System.out.println("Notifikasi : "+e);
@@ -678,28 +674,28 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
                 if(ps!=null){
                     ps.close();
                 }
-            }     
-            
+            }
+
             for(i=0;i<kolom;i++){
-                htmlContent.append(                             
+                htmlContent.append(
                     "<tr class='isi'>"+
                         "<td valign='middle' align='center'></td>"+
                         "<td valign='middle' align='left' colspan='5'>Total "+akunbayar[i]+"</td>"+
                         "<td valign='middle' align='right'>"+Valid.SetAngka(totalbayar[i])+"</td>"+
                     "</tr>"
-                );   
+                );
             }
-            
+
             if(all>0){
-                htmlContent.append(                             
+                htmlContent.append(
                     "<tr class='isi'>"+
                         "<td valign='middle' align='center'></td>"+
                         "<td valign='middle' align='left' colspan='5'><b>Jumkah Total<b></td>"+
                         "<td valign='middle' align='right'><b>"+Valid.SetAngka(all)+"<b></td>"+
                     "</tr>"
-                ); 
+                );
             }
-                         
+
             LoadHTML.setText(
                     "<html>"+
                       "<table width='100%' border='0' align='left' cellpadding='3px' cellspacing='0' class='tbl_form'>"+
@@ -710,6 +706,6 @@ public final class DlgPembayaranPerAKunBayar3 extends javax.swing.JDialog {
             System.out.println("Notifikasi : "+e);
         }
         this.setCursor(Cursor.getDefaultCursor());
-    }    
+    }
 
 }

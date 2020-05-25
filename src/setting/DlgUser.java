@@ -1415,11 +1415,7 @@ public class DlgUser extends javax.swing.JDialog {
             }
         });
 
-<<<<<<< HEAD
         internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Setup User ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
-=======
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Setup User ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
->>>>>>> upstream/master
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -2403,7 +2399,7 @@ public class DlgUser extends javax.swing.JDialog {
                     "surat_hamil='"+tbUser.getValueAt(i,623).toString()+"',"+
                     "set_tarif_online='"+tbUser.getValueAt(i,624).toString()+"',"+
                     "booking_periksa='"+tbUser.getValueAt(i,625).toString()+"'");
-            }            
+            }
             tampil();
             emptTeks();
         }
@@ -3110,7 +3106,7 @@ public class DlgUser extends javax.swing.JDialog {
                                     "surat_hamil='"+tbUser.getValueAt(barisdicopy,623).toString()+"',"+
                                     "set_tarif_online='"+tbUser.getValueAt(barisdicopy,624).toString()+"',"+
                                     "booking_periksa='"+tbUser.getValueAt(barisdicopy,625).toString()+"'");
-                            }    
+                            }
                             userdicopy="";
                             copyhakakses="";
                             barisdicopy=-1;

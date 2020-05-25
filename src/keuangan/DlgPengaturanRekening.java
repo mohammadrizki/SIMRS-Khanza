@@ -728,7 +728,7 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
             Kontra_Retur_Beli_Toko=tbPengaturan.getValueAt(129,1).toString();
             Retur_Beli_Non_Medis=tbPengaturan.getValueAt(130,1).toString();
             Kontra_Retur_Beli_Non_Medis=tbPengaturan.getValueAt(131,1).toString();
-            
+
             if(Tindakan_Ralan.equals("")||Laborat_Ralan.equals("")||Radiologi_Ralan.equals("")||Obat_Ralan.equals("")||
                 Registrasi_Ralan.equals("")||Tambahan_Ralan.equals("")||Potongan_Ralan.equals("")||Tindakan_Ranap.equals("")||
                 Laborat_Ranap.equals("")||Radiologi_Ranap.equals("")||
@@ -771,16 +771,11 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
                 Utang_Jasa_Medik_Paramedis_Operasi_Ranap.equals("")||HPP_Obat_Operasi_Ranap.equals("")||Persediaan_Obat_Kamar_Operasi_Ranap.equals("")||
                 Stok_Keluar_Medis.equals("")||Kontra_Stok_Keluar_Medis.equals("")||HPP_Obat_Jual_Bebas.equals("")||
                 Persediaan_Obat_Jual_Bebas.equals("")||Penerimaan_NonMedis.equals("")||Kontra_Penerimaan_NonMedis.equals("")||
-<<<<<<< HEAD
-                Bayar_Pemesanan_Non_Medis.equals("")||Hibah_Obat.equals("")||Kontra_Hibah_Obat.equals("")){
-                    JOptionPane.showMessageDialog(null,"Silakan lengkapi seluruh data Akun...!!!!");
-=======
                 Bayar_Pemesanan_Non_Medis.equals("")||Hibah_Obat.equals("")||Kontra_Hibah_Obat.equals("")||Penerimaan_Toko.equals("")||
                 Kontra_Penerimaan_Toko.equals("")||Pengadaan_Toko.equals("")||Bayar_Pemesanan_Toko.equals("")||Penjualan_Toko.equals("")||
                 HPP_Barang_Toko.equals("")||Persediaan_Barang_Toko.equals("")||Piutang_Toko.equals("")||Kontra_Piutang_Toko.equals("")||
                 Retur_Beli_Toko.equals("")||Kontra_Retur_Beli_Toko.equals("")||Retur_Beli_Non_Medis.equals("")||Kontra_Retur_Beli_Non_Medis.equals("")){
                     JOptionPane.showMessageDialog(null,"Silahkan lengkapi seluruh data Akun...!!!!");
->>>>>>> upstream/master
                     tbPengaturan.requestFocus();
             }else{
                 Sequel.queryu("delete from set_akun_ralan");
@@ -1227,9 +1222,6 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
             Bayar_Pemesanan_Non_Medis="";
             Hibah_Obat="";
             Kontra_Hibah_Obat="";
-<<<<<<< HEAD
-
-=======
             Penerimaan_Toko="";
             Kontra_Penerimaan_Toko="";
             Pengadaan_Toko="";
@@ -1243,8 +1235,7 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
             Kontra_Retur_Beli_Toko="";
             Retur_Beli_Non_Medis="";
             Kontra_Retur_Beli_Non_Medis="";
-            
->>>>>>> upstream/master
+
             ps=koneksi.prepareStatement("select * from set_akun_ralan");
             try {
                 rs=ps.executeQuery();
@@ -1400,9 +1391,6 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
                     Bayar_Pemesanan_Non_Medis=rs.getString("Bayar_Pemesanan_Non_Medis");
                     Hibah_Obat=rs.getString("Hibah_Obat");
                     Kontra_Hibah_Obat=rs.getString("Kontra_Hibah_Obat");
-<<<<<<< HEAD
-                }
-=======
                     Penerimaan_Toko=rs.getString("Penerimaan_Toko");
                     Kontra_Penerimaan_Toko=rs.getString("Kontra_Penerimaan_Toko");
                     Pengadaan_Toko=rs.getString("Pengadaan_Toko");
@@ -1416,8 +1404,8 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
                     Kontra_Retur_Beli_Toko=rs.getString("Kontra_Retur_Beli_Toko");
                     Retur_Beli_Non_Medis=rs.getString("Retur_Beli_Non_Medis");
                     Kontra_Retur_Beli_Non_Medis=rs.getString("Kontra_Retur_Beli_Non_Medis");
-                }               
->>>>>>> upstream/master
+                }
+
             } catch (Exception e) {
                 System.out.println("Notif Set Akun :"+e);
             } finally{
@@ -1990,13 +1978,8 @@ public class DlgPengaturanRekening extends javax.swing.JDialog {
                 Sequel.cariIsi("select nm_rek from rekening where kd_rek=?",Kontra_Stok_Keluar_Medis),
                 Sequel.cariIsi("select tipe from rekening where kd_rek=?",Kontra_Stok_Keluar_Medis),
                 Sequel.cariIsi("select balance from rekening where kd_rek=?",Kontra_Stok_Keluar_Medis)
-<<<<<<< HEAD
             });
-            tabMode.addRow(new Object[]{" [Debet] Akun HPP Obat Jual Bebas",HPP_Obat_Jual_Bebas,
-=======
-            }); 
             tabMode.addRow(new Object[]{" [Debet] Akun HPP Obat Jual Bebas pada menu Penjualan Obat Bebas",HPP_Obat_Jual_Bebas,
->>>>>>> upstream/master
                 Sequel.cariIsi("select nm_rek from rekening where kd_rek=?",HPP_Obat_Jual_Bebas),
                 Sequel.cariIsi("select tipe from rekening where kd_rek=?",HPP_Obat_Jual_Bebas),
                 Sequel.cariIsi("select balance from rekening where kd_rek=?",HPP_Obat_Jual_Bebas)

@@ -103,7 +103,7 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
             }
         }
         tbKamar.setDefaultRenderer(Object.class, new WarnaTable());
-        
+
         Kd.setDocument(new batasInput((byte)15).getKata(Kd));
         Saldo.setDocument(new batasInput((byte)15).getKata(Saldo));
         TCari.setDocument(new batasInput((byte)100).getKata(TCari));
@@ -128,8 +128,8 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
                     }
                 }
             });
-        }  
-        
+        }
+
         rekening.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {}
@@ -138,13 +138,13 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
             @Override
             public void windowClosed(WindowEvent e) {
                 if(akses.getform().equals("DlgRekeningTahun")){
-                    if(rekening.getTabel().getSelectedRow()!= -1){      
+                    if(rekening.getTabel().getSelectedRow()!= -1){
                         Kd.setText(rekening.getTabel().getValueAt(rekening.getTabel().getSelectedRow(),0).toString());
                         Nm.setText(rekening.getTabel().getValueAt(rekening.getTabel().getSelectedRow(),1).toString());
                         Tipe.setText(rekening.getTabel().getValueAt(rekening.getTabel().getSelectedRow(),4).toString());
                         Balance.setText(rekening.getTabel().getValueAt(rekening.getTabel().getSelectedRow(),5).toString());
                         Kd.requestFocus();
-                    }                 
+                    }
                 }
             }
             @Override
@@ -156,7 +156,7 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
             @Override
             public void windowDeactivated(WindowEvent e) {}
         });
-        
+
         rekening.getTabel().addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {}
@@ -170,8 +170,8 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
             }
             @Override
             public void keyReleased(KeyEvent e) {}
-        });  
-        
+        });
+
         Valid.LoadTahun(Tahun);
     }
 
@@ -230,11 +230,7 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-<<<<<<< HEAD
         internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Saldo Rekening ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
-=======
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Saldo Rekening ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
->>>>>>> upstream/master
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -574,7 +570,7 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
                 }
             } catch (SQLException ex) {
                     System.out.println("Catatan rekening : "+ex);
-            }           
+            }
         }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
             try {
                 ps3=koneksi.prepareStatement("select kd_rek, nm_rek, tipe, balance from rekening where kd_rek=? order by kd_rek");
@@ -626,7 +622,7 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
             } catch (SQLException ex) {
                     System.out.println("Catatan rekening : "+ex);
             }
-            Tahun.requestFocus(); 
+            Tahun.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_DOWN){
             TCari.requestFocus();
         }
@@ -717,7 +713,7 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
         }else if(tabMode.getRowCount()!=0){
             Sequel.queryu("truncate table temporary");
             int row=tabMode.getRowCount();
-            for(int i=0;i<row;i++){  
+            for(int i=0;i<row;i++){
                 Sequel.menyimpan("temporary","'0','"+
                                 tabMode.getValueAt(i,0).toString()+"','"+
                                 tabMode.getValueAt(i,1).toString()+"','"+
@@ -727,16 +723,16 @@ public final class DlgRekeningTahun extends javax.swing.JDialog {
                                 tabMode.getValueAt(i,5).toString()+"','"+
                                 tabMode.getValueAt(i,6).toString()+"','"+
                                 tabMode.getValueAt(i,7).toString()+"','"+
-                                tabMode.getValueAt(i,8).toString()+"','','','','','','','','','','','','','','','','','','','','','','','','','','','',''","Rekening Tahun"); 
+                                tabMode.getValueAt(i,8).toString()+"','','','','','','','','','','','','','','','','','','','','','','','','','','','',''","Rekening Tahun");
             }
-            Map<String, Object> param = new HashMap<>();                 
+            Map<String, Object> param = new HashMap<>();
             param.put("namars",akses.getnamars());
             param.put("alamatrs",akses.getalamatrs());
             param.put("kotars",akses.getkabupatenrs());
             param.put("propinsirs",akses.getpropinsirs());
             param.put("kontakrs",akses.getkontakrs());
-            param.put("emailrs",akses.getemailrs());   
-            param.put("logo",Sequel.cariGambar("select logo from setting")); 
+            param.put("emailrs",akses.getemailrs());
+            param.put("logo",Sequel.cariGambar("select logo from setting"));
             Valid.MyReport("rptRekeningTahun.jasper","report","::[ Saldo Rekening ]::",param);
         }
         this.setCursor(Cursor.getDefaultCursor());
@@ -887,7 +883,7 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
 
     public void tampil() {
         Valid.tabelKosong(tabMode);
-        try{       
+        try{
             ps=koneksi.prepareStatement("select rekeningtahun.thn,rekening.kd_rek, rekening.nm_rek, rekening.tipe, "+
                 "rekening.balance,rekeningtahun.saldo_awal  "+
                 "from rekening inner join rekeningtahun on rekeningtahun.kd_rek=rekening.kd_rek "+
@@ -914,7 +910,7 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
                     try {
                         ps2.setString(1,rs.getString(2));
                         ps2.setString(2,"%"+Tahun.getSelectedItem()+"%");
-                        rs2=ps2.executeQuery();                
+                        rs2=ps2.executeQuery();
                         if(rs2.next()){
                             switch (rs.getString("balance")) {
                                 case "D":
@@ -939,21 +935,21 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
                             ps2.close();
                         }
                     }
-                        
+
                     if(saldoakhir<0){
                         tabMode.addRow(new Object[]{
                              rs.getString(1).substring(0, 4),rs.getString(2),rs.getString(3),
                              rs.getString(4),rs.getString(5),df2.format(rs.getDouble(6)),
                              df2.format(md),df2.format(mk),"("+df2.format(saldoakhir*(-1))+")"
-                        });      
+                        });
                     }else{
                         tabMode.addRow(new Object[]{
                              rs.getString(1).substring(0, 4),rs.getString(2),rs.getString(3),
                              rs.getString(4),rs.getString(5),df2.format(rs.getDouble(6)),
                              df2.format(md),df2.format(mk),df2.format(saldoakhir)
-                        }); 
+                        });
                     }
-                    
+
                 }
             } catch (Exception e) {
                 System.out.println("Notif : "+e);
@@ -964,7 +960,7 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
                 if(ps!=null){
                     ps.close();
                 }
-            }                
+            }
         }catch(Exception e){
             System.out.println("Notifikasi : "+e);
         }
@@ -979,7 +975,7 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
         Tipe.setText("");
         Saldo.setText("");
         Tahun.setSelectedIndex(1);
-        Kd.requestFocus();        
+        Kd.requestFocus();
     }
 
     private void getData() {
@@ -998,7 +994,7 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
     public JTextField getTextField(){
         return Kd;
     }
-    
+
     public JTextField getSaldo(){
         return Saldo;
     }
@@ -1006,13 +1002,13 @@ private void NmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NmKeyP
     public JTable getTabel(){
         return tbKamar;
     }
-    
+
     public void isCek(){
-        asalform=akses.getform();       
+        asalform=akses.getform();
         BtnSimpan.setEnabled(akses.getrekening_tahun());
         BtnBatal.setEnabled(akses.getrekening_tahun());
         BtnEdit.setEnabled(akses.getrekening_tahun());
         BtnHapus.setEnabled(akses.getrekening_tahun());
-        BtnPrint.setEnabled(akses.getrekening_tahun());    
+        BtnPrint.setEnabled(akses.getrekening_tahun());
     }
 }

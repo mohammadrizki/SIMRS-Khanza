@@ -117,7 +117,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
                     }
                 }
             });
-        }  
+        }
         dokter.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {}
@@ -128,7 +128,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
                 if(dokter.getTable().getSelectedRow()!= -1){
                     KodePetugas.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());
                     NamaPetugas.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
-                }   
+                }
                 KodePetugas.requestFocus();
             }
             @Override
@@ -140,7 +140,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
             @Override
             public void windowDeactivated(WindowEvent e) {}
         });
-        
+
         ChkInput.setSelected(false);
         isForm();
     }
@@ -207,11 +207,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
             }
         });
 
-<<<<<<< HEAD
         internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Data Pencekalan Darah Donor ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
-=======
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Pencekalan Darah Donor ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
->>>>>>> upstream/master
         internalFrame1.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
@@ -652,7 +648,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
                 });
                 tampil();
                 emptTeks();
-            }                
+            }
         }
 }//GEN-LAST:event_BtnSimpanActionPerformed
 
@@ -667,7 +663,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
     private void BtnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBatalActionPerformed
         emptTeks();
         ChkInput.setSelected(true);
-        isForm(); 
+        isForm();
 }//GEN-LAST:event_BtnBatalActionPerformed
 
     private void BtnBatalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnBatalKeyPressed
@@ -700,7 +696,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
             Valid.textKosong(KodePetugas,"Petugas Pemeriksa");
         }else if(Keterangan.getText().trim().equals("")){
             Valid.textKosong(Keterangan,"Keterangan");
-        }else{       
+        }else{
             if(Sequel.mengedittf("utd_cekal_darah","no_donor=?","tanggal=?,dinas=?,petugas_pemusnahan=?,keterangan=?",5,new String[]{
                 Valid.SetTgl(TanggalCekal.getSelectedItem()+""),Dinas.getSelectedItem().toString(),
                 KodePetugas.getText(),Keterangan.getText(),NoDonor.getText()
@@ -738,14 +734,14 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis. Tidak ada data yang bisa anda print...!!!!");
             BtnBatal.requestFocus();
         }else if(tabMode.getRowCount()!=0){
-            Map<String, Object> param = new HashMap<>(); 
+            Map<String, Object> param = new HashMap<>();
             param.put("namars",akses.getnamars());
             param.put("alamatrs",akses.getalamatrs());
             param.put("kotars",akses.getkabupatenrs());
             param.put("propinsirs",akses.getpropinsirs());
             param.put("kontakrs",akses.getkontakrs());
-            param.put("emailrs",akses.getemailrs());   
-            param.put("logo",Sequel.cariGambar("select logo from setting")); 
+            param.put("emailrs",akses.getemailrs());
+            param.put("logo",Sequel.cariGambar("select logo from setting"));
             if(TCari.getText().equals("")){
                 Valid.MyReportqry("rptCekalDonor.jasper","report","::[ Data Pencekalan Darah Donor ]::",
                         "select utd_cekal_darah.no_donor,utd_donor.no_pendonor,utd_pendonor.nama,utd_pendonor.no_telp,"+
@@ -770,7 +766,7 @@ public final class UTDCekalDarah extends javax.swing.JDialog {
                         "utd_cekal_darah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+"' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+"' and utd_cekal_darah.dinas like '%"+TCari.getText().trim()+"%' or "+
                         "utd_cekal_darah.tanggal between '"+Valid.SetTgl(DTPCari1.getSelectedItem()+"")+"' and '"+Valid.SetTgl(DTPCari2.getSelectedItem()+"")+"' and utd_cekal_darah.keterangan like '%"+TCari.getText().trim()+"%' order by utd_cekal_darah.tanggal",param);
             }
-                
+
         }
         this.setCursor(Cursor.getDefaultCursor());
 }//GEN-LAST:event_BtnPrintActionPerformed
@@ -848,7 +844,7 @@ private void KodePetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:eve
             Sequel.cariIsi("select nama from petugas where nip=?",NamaPetugas,KodePetugas.getText());
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnDokterActionPerformed(null);
-        }else{            
+        }else{
             Valid.pindah(evt,Keterangan,BtnSimpan);
         }
 }//GEN-LAST:event_KodePetugasKeyPressed
@@ -865,7 +861,7 @@ private void NamaPetugasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:eve
 }//GEN-LAST:event_NamaPetugasKeyPressed
 
 private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChkInputActionPerformed
-  isForm();                
+  isForm();
 }//GEN-LAST:event_ChkInputActionPerformed
 
     private void DinasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DinasKeyPressed
@@ -940,7 +936,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private widget.Table tbObat;
     // End of variables declaration//GEN-END:variables
 
-    private void tampil() {        
+    private void tampil() {
         Valid.tabelKosong(tabMode);
         try{
             if(TCari.getText().equals("")){
@@ -969,7 +965,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     "utd_cekal_darah.tanggal between ? and ? and utd_cekal_darah.keterangan like ? order by utd_cekal_darah.tanggal"
                 );
             }
-                
+
             try {
                 if(TCari.getText().equals("")){
                     ps.setString(1,Valid.SetTgl(DTPCari1.getSelectedItem()+""));
@@ -994,7 +990,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     ps.setString(17,Valid.SetTgl(DTPCari2.getSelectedItem()+""));
                     ps.setString(18,"%"+TCari.getText().trim()+"%");
                 }
-                    
+
                 rs=ps.executeQuery();
                 while(rs.next()){
                     tabMode.addRow(new String[]{
@@ -1045,7 +1041,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             Keterangan.setText(tbObat.getValueAt(tbObat.getSelectedRow(),8).toString());
         }
     }
-    
+
     public void setDarah(String nodonor,String nama,String alamat,String telp) {
         NoDonor.setText(nodonor);
         IDPendonor.setText(nama);
@@ -1055,21 +1051,21 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         ChkInput.setSelected(true);
         isForm();
     }
-    
+
     private void isForm(){
         if(ChkInput.isSelected()==true){
             ChkInput.setVisible(false);
             PanelInput.setPreferredSize(new Dimension(WIDTH,158));
-            FormInput.setVisible(true);      
+            FormInput.setVisible(true);
             ChkInput.setVisible(true);
-        }else if(ChkInput.isSelected()==false){           
-            ChkInput.setVisible(false);            
+        }else if(ChkInput.isSelected()==false){
+            ChkInput.setVisible(false);
             PanelInput.setPreferredSize(new Dimension(WIDTH,20));
-            FormInput.setVisible(false);      
+            FormInput.setVisible(false);
             ChkInput.setVisible(true);
         }
     }
-    
+
     public void isCek(){
         BtnSimpan.setEnabled(akses.getutd_cekal_darah());
         BtnHapus.setEnabled(akses.getutd_cekal_darah());
@@ -1078,7 +1074,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         if(akses.getjml2()>=1){
             KodePetugas.setText(akses.getkode());
             Sequel.cariIsi("select nama from petugas where nip=?", NamaPetugas,KodePetugas.getText());
-        }    
+        }
     }
 
 }

@@ -1134,11 +1134,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             ps2.close();
                         }
                     }
-<<<<<<< HEAD
 
-                    //hibah
-=======
-                    
                     ps2=koneksi.prepareStatement("select sum(jml), sum(jml*harga) "+
                         " from mutasibarang where kode_brng=? and "+
                         " tanggal between ? and ?");
@@ -1147,7 +1143,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                         ps2.setString(2,tglopname+" 00:00:00");
                         ps2.setString(3,Valid.SetTgl(Tgl2.getSelectedItem()+"")+" 23:59:59");
                         rs2=ps2.executeQuery();
-                        if(rs2.next()){                    
+                        if(rs2.next()){
                             jumlahmutasimasuk=rs2.getDouble(1);
                         }
                     } catch (Exception e) {
@@ -1160,7 +1156,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             ps2.close();
                         }
                     }
-                    
+
                     ps2=koneksi.prepareStatement("select sum(jml), sum(jml*harga) "+
                         " from mutasibarang where kode_brng=? and "+
                         " tanggal between ? and ?");
@@ -1169,7 +1165,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                         ps2.setString(2,tglopname+" 00:00:00");
                         ps2.setString(3,Valid.SetTgl(Tgl2.getSelectedItem()+"")+" 23:59:59");
                         rs2=ps2.executeQuery();
-                        if(rs2.next()){                    
+                        if(rs2.next()){
                             jumlahmutasikeluar=rs2.getDouble(1);
                         }
                     } catch (Exception e) {
@@ -1182,9 +1178,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             ps2.close();
                         }
                     }
-                    
-                    //hibah 
->>>>>>> upstream/master
+
                     ps2=koneksi.prepareStatement("select sum(detailhibah_obat_bhp.jumlah2) "+
                         " from hibah_obat_bhp inner join detailhibah_obat_bhp "+
                         " on hibah_obat_bhp.no_hibah=detailhibah_obat_bhp.no_hibah "+

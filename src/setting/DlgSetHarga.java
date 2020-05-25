@@ -1,11 +1,11 @@
 /*
-  Dilarang keras menggandakan/mengcopy/menyebarkan/membajak/mendecompile 
+  Dilarang keras menggandakan/mengcopy/menyebarkan/membajak/mendecompile
   Software ini dalam bentuk apapun tanpa seijin pembuat software
   (Khanza.Soft Media). Bagi yang sengaja membajak softaware ini ta
   npa ijin, kami sumpahi sial 1000 turunan, miskin sampai 500 turu
   nan. Selalu mendapat kecelakaan sampai 400 turunan. Anak pertama
   nya cacat tidak punya kaki sampai 300 turunan. Susah cari jodoh
-  sampai umur 50 tahun sampai 200 turunan. Ya Alloh maafkan kami 
+  sampai umur 50 tahun sampai 200 turunan. Ya Alloh maafkan kami
   karena telah berdoa buruk, semua ini kami lakukan karena kami ti
   dak pernah rela karya kami dibajak tanpa ijin.
  */
@@ -47,7 +47,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
     private ResultSet rs;
     private DlgBarang barang=new DlgBarang(null,false);
 
-    /** Creates new form DlgAdmin 
+    /** Creates new form DlgAdmin
      *@param parent
      *@param modal*/
     public DlgSetHarga(java.awt.Frame parent, boolean modal) {
@@ -96,7 +96,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
         }
 
         tbPengaturanUmum.setDefaultRenderer(Object.class, new WarnaTable());
-        
+
         tabModePengaturanHargaUmum=new DefaultTableModel(null,new Object[]{
               "Ralan(%)","Ranap K1(%)","Ranap K2(%)","Ranap K3(%)","Kelas Utama(%)",
               "Ranap VIP(%)","Ranap VVIP(%)","Beli Luar(%)","Jual Bebas(%)","Karyawan(%)",
@@ -175,8 +175,8 @@ public class DlgSetHarga extends javax.swing.JDialog {
         ranapvipperbarang.setDocument(new batasInput((byte)10).getKata(ranapvipperbarang));
         ranapvvipperbarang.setDocument(new batasInput((byte)10).getKata(ranapvvipperbarang));
         beliluarperbarang.setDocument(new batasInput((byte)10).getKata(beliluarperbarang));
-        jualbebasperbarang.setDocument(new batasInput((byte)10).getKata(jualbebasperbarang));        
-        
+        jualbebasperbarang.setDocument(new batasInput((byte)10).getKata(jualbebasperbarang));
+
         jenis.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {}
@@ -201,7 +201,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             @Override
             public void windowDeactivated(WindowEvent e) {}
         });
-        
+
         barang.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {}
@@ -209,10 +209,10 @@ public class DlgSetHarga extends javax.swing.JDialog {
             public void windowClosing(WindowEvent e) {}
             @Override
             public void windowClosed(WindowEvent e) {
-                if(barang.getTable().getSelectedRow()!= -1){                   
-                    kdbarang.setText(barang.getTable().getValueAt(barang.getTable().getSelectedRow(),1).toString());                    
+                if(barang.getTable().getSelectedRow()!= -1){
+                    kdbarang.setText(barang.getTable().getValueAt(barang.getTable().getSelectedRow(),1).toString());
                     nmbarang.setText(barang.getTable().getValueAt(barang.getTable().getSelectedRow(),2).toString());
-                }     
+                }
                 kdbarang.requestFocus();
             }
             @Override
@@ -224,7 +224,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             @Override
             public void windowDeactivated(WindowEvent e) {}
         });
-        
+
         barang.getTable().addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {}
@@ -232,7 +232,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode()==KeyEvent.VK_SPACE){
                     barang.dispose();
-                }  
+                }
             }
             @Override
             public void keyReleased(KeyEvent e) {}
@@ -428,11 +428,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             }
         });
 
-<<<<<<< HEAD
         internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Setup Harga Obat/Barang/Alkes ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
-=======
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Setup Harga Obat/Barang/Alkes ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
->>>>>>> upstream/master
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -1752,14 +1748,14 @@ public class DlgSetHarga extends javax.swing.JDialog {
                     Valid.textKosong(jualbebasumum,"Keuntungan di Penjualan Bebas");
                 }else if(karyawanumum.getText().trim().equals("")){
                     Valid.textKosong(karyawanumum,"Keuntungan Jika Pasien/Pembeli Karyawan");
-                }else{  
+                }else{
                     Sequel.menyimpan("setpenjualanumum","'"+ralanumum.getText()+"','"+ranapk1umum.getText()+"','"+
                             ranapk2umum.getText()+"','"+ranapk3umum.getText()+"','"+ranaputamaumum.getText()+"','"+
                             ranapvipumum.getText()+"','"+ranapvvipumum.getText()+"','"+beliluarumum.getText()+"','"+
                             jualbebasumum.getText()+"','"+karyawanumum.getText()+"'","Set Harga");
                     tampilpengaturanhargaumum();
                     emptTeks();
-                }                
+                }
             }
         }else if(TabSetting.getSelectedIndex()==2){
             if(ralan.getText().trim().equals("")){
@@ -1784,7 +1780,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 Valid.textKosong(karyawan,"Keuntungan Jika Pasien/Pembeli Karyawan");
             }else if(kdjns.getText().trim().equals("")||nmjns.getText().trim().equals("")){
                 Valid.textKosong(kdjns,"Jenis Barang");
-            }else{            
+            }else{
                 Sequel.menyimpan("setpenjualan","'"+ralan.getText()+"','"+ranapk1.getText()+"','"+
                         ranapk2.getText()+"','"+ranapk3.getText()+"','"+ranaputama.getText()+"','"+
                         ranapvip.getText()+"','"+ranapvvip.getText()+"','"+beliluar.getText()+"','"+
@@ -1815,7 +1811,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 Valid.textKosong(karyawanperbarang,"Keuntungan Jika Pasien/Pembeli Karyawan");
             }else if(kdbarang.getText().trim().equals("")||nmbarang.getText().trim().equals("")){
                 Valid.textKosong(kdbarang,"Barang/Alkes/BHP");
-            }else{            
+            }else{
                 Sequel.menyimpan("setpenjualanperbarang","'"+ralanperbarang.getText()+"','"+ranapk1perbarang.getText()+"','"+
                         ranapk2perbarang.getText()+"','"+ranapk3perbarang.getText()+"','"+ranaputamaperbarang.getText()+"','"+
                         ranapvipperbarang.getText()+"','"+ranapvvipperbarang.getText()+"','"+beliluarperbarang.getText()+"','"+
@@ -1823,7 +1819,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 tampilpengaturanhargaperbarang();
                 emptTeks();
             }
-        }            
+        }
 }//GEN-LAST:event_BtnSimpanActionPerformed
 
     private void BtnSimpanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnSimpanKeyPressed
@@ -1838,7 +1834,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 Valid.pindah(evt,karyawan,BtnBatal);
             }else if(TabSetting.getSelectedIndex()==3){
                 Valid.pindah(evt,ralanperbarang,BtnBatal);
-            }                
+            }
         }
 }//GEN-LAST:event_BtnSimpanKeyPressed
 
@@ -1890,7 +1886,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 tampilpengaturanhargaperbarang();
                 emptTeks();
             }
-        }             
+        }
 }//GEN-LAST:event_BtnHapusActionPerformed
 
     private void BtnHapusKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnHapusKeyPressed
@@ -1990,7 +1986,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             });
             tampilpengaturanumum();
             emptTeks();
-        }else if(TabSetting.getSelectedIndex()==1){            
+        }else if(TabSetting.getSelectedIndex()==1){
             if(ralanumum.getText().trim().equals("")){
                 Valid.textKosong(ralanumum,"Keuntungan di Rawat Jalan");
             }else if(ranapk1umum.getText().trim().equals("")){
@@ -2011,7 +2007,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 Valid.textKosong(jualbebasumum,"Keuntungan di Penjualan Bebas");
             }else if(karyawanumum.getText().trim().equals("")){
                 Valid.textKosong(karyawanumum,"Keuntungan Jika Pasien/Pembeli Karyawan");
-            }else{ 
+            }else{
                 Sequel.queryu("delete from setpenjualanumum");
                 Sequel.menyimpan("setpenjualanumum","'"+ralanumum.getText()+"','"+ranapk1umum.getText()+"','"+
                         ranapk2umum.getText()+"','"+ranapk3umum.getText()+"','"+ranaputamaumum.getText()+"','"+
@@ -2019,7 +2015,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                         jualbebasumum.getText()+"','"+karyawanumum.getText()+"'","Set Harga");
                 tampilpengaturanhargaumum();
                 emptTeks();
-            }   
+            }
         }else if(TabSetting.getSelectedIndex()==2){
             if(ralan.getText().trim().equals("")){
                 Valid.textKosong(ralan,"Keuntungan di Rawat Jalan");
@@ -2075,7 +2071,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 Valid.textKosong(karyawanperbarang,"Keuntungan Jika Pasien/Pembeli Karyawan");
             }else if(kdbarang.getText().trim().equals("")||nmbarang.getText().trim().equals("")){
                 Valid.textKosong(kdbarang,"Barang/Alkes/BHP");
-            }else{            
+            }else{
                 Sequel.queryu("delete from setpenjualanperbarang where kode_brng='"+kdbarang.getText()+"'");
                 Sequel.menyimpan("setpenjualanperbarang","'"+ralanperbarang.getText()+"','"+ranapk1perbarang.getText()+"','"+
                         ranapk2perbarang.getText()+"','"+ranapk3perbarang.getText()+"','"+ranaputamaperbarang.getText()+"','"+
@@ -2084,7 +2080,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 tampilpengaturanhargaperbarang();
                 emptTeks();
             }
-        }              
+        }
     }//GEN-LAST:event_BtnEditActionPerformed
 
     private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnEditKeyPressed
@@ -2209,7 +2205,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
 
     private void ppUPdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppUPdateActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        for (int i = 0; i < tbAdmin.getRowCount(); i++) {             
+        for (int i = 0; i < tbAdmin.getRowCount(); i++) {
             Sequel.queryu2("update databarang set ralan=round(h_beli+(h_beli*("+tbAdmin.getValueAt(i,0).toString()+"/100))),"+
                 "kelas1=round(h_beli+(h_beli*("+tbAdmin.getValueAt(i,1).toString()+"/100))),"+
                 "kelas2=round(h_beli+(h_beli*("+tbAdmin.getValueAt(i,2).toString()+"/100))),"+
@@ -2220,8 +2216,8 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 "beliluar=round(h_beli+(h_beli*("+tbAdmin.getValueAt(i,7).toString()+"/100))),"+
                 "jualbebas=round(h_beli+(h_beli*("+tbAdmin.getValueAt(i,8).toString()+"/100))),"+
                 "karyawan=round(h_beli+(h_beli*("+tbAdmin.getValueAt(i,9).toString()+"/100))) where "+
-                "kdjns='"+tbAdmin.getValueAt(i,10).toString()+"'");                           
-        }            
+                "kdjns='"+tbAdmin.getValueAt(i,10).toString()+"'");
+        }
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_ppUPdateActionPerformed
 
@@ -2738,7 +2734,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
 
     private void ppUPdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppUPdate1ActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        for (int i = 0; i < tbPengaturanHargaUmum.getRowCount(); i++) {             
+        for (int i = 0; i < tbPengaturanHargaUmum.getRowCount(); i++) {
             Sequel.queryu2("update databarang set ralan=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,0).toString()+"/100))),"+
                 "kelas1=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,1).toString()+"/100))),"+
                 "kelas2=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,2).toString()+"/100))),"+
@@ -2748,14 +2744,14 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 "vvip=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,6).toString()+"/100))),"+
                 "beliluar=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,7).toString()+"/100))),"+
                 "jualbebas=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,8).toString()+"/100))),"+
-                "karyawan=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,9).toString()+"/100)))");                           
-        }            
+                "karyawan=round(h_beli+(h_beli*("+tbPengaturanHargaUmum.getValueAt(i,9).toString()+"/100)))");
+        }
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_ppUPdate1ActionPerformed
 
     private void ppUPdate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppUPdate2ActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        for (int i = 0; i < tbPengaturanHargaPerBarang.getRowCount(); i++) {             
+        for (int i = 0; i < tbPengaturanHargaPerBarang.getRowCount(); i++) {
             Sequel.queryu2("update databarang set ralan=round(h_beli+(h_beli*("+tbPengaturanHargaPerBarang.getValueAt(i,0).toString()+"/100))),"+
                 "kelas1=round(h_beli+(h_beli*("+tbPengaturanHargaPerBarang.getValueAt(i,1).toString()+"/100))),"+
                 "kelas2=round(h_beli+(h_beli*("+tbPengaturanHargaPerBarang.getValueAt(i,2).toString()+"/100))),"+
@@ -2766,8 +2762,8 @@ public class DlgSetHarga extends javax.swing.JDialog {
                 "beliluar=round(h_beli+(h_beli*("+tbPengaturanHargaPerBarang.getValueAt(i,7).toString()+"/100))),"+
                 "jualbebas=round(h_beli+(h_beli*("+tbPengaturanHargaPerBarang.getValueAt(i,8).toString()+"/100))),"+
                 "karyawan=round(h_beli+(h_beli*("+tbPengaturanHargaPerBarang.getValueAt(i,9).toString()+"/100))) where "+
-                "kode_brng='"+tbPengaturanHargaPerBarang.getValueAt(i,10).toString()+"'");                           
-        }            
+                "kode_brng='"+tbPengaturanHargaPerBarang.getValueAt(i,10).toString()+"'");
+        }
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_ppUPdate2ActionPerformed
 
@@ -2944,7 +2940,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             System.out.println("Notifikasi : "+e);
         }
     }
-    
+
     private void tampilpengaturanumum() {
         Valid.tabelKosong(tabModePengaturanUmum);
         try{
@@ -2971,7 +2967,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             System.out.println("Notifikasi : "+e);
         }
     }
-    
+
     private void tampilpengaturanhargaumum() {
         Valid.tabelKosong(tabModePengaturanHargaUmum);
         try{
@@ -3036,7 +3032,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             System.out.println("Notifikasi : "+e);
         }
     }
-    
+
     private void getData() {
         int row=tbAdmin.getSelectedRow();
         if(row!= -1){
@@ -3054,7 +3050,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             nmjns.setText(tabMode.getValueAt(row,11).toString());
         }
     }
-    
+
     private void getDataPengaturanHargaUmum() {
         int row=tbPengaturanHargaUmum.getSelectedRow();
         if(row!= -1){
@@ -3070,7 +3066,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             karyawanumum.setText(tabModePengaturanHargaUmum.getValueAt(row,9).toString());
         }
     }
-    
+
     private void getDataPengaturanUmum() {
         int row=tbPengaturanUmum.getSelectedRow();
         if(row!= -1){
@@ -3096,7 +3092,7 @@ public class DlgSetHarga extends javax.swing.JDialog {
             nmbarang.setText(tabModePengaturanHargaPerBarang.getValueAt(row,11).toString());
         }
     }
-    
+
     public void emptTeks() {
         if(TabSetting.getSelectedIndex()==0){
             cmbPengaturan.requestFocus();
@@ -3140,6 +3136,6 @@ public class DlgSetHarga extends javax.swing.JDialog {
             kdbarang.setText("");
             nmbarang.setText("");
             ralanperbarang.requestFocus();
-        }            
+        }
     }
 }

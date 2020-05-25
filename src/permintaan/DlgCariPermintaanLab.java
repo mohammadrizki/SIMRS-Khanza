@@ -1232,15 +1232,11 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             tabMode.getValueAt(i,8).toString()+"','"+
                             tabMode.getValueAt(i,9).toString()+"','"+
                             tabMode.getValueAt(i,10).toString()+"','"+
-<<<<<<< HEAD
-                            tabMode.getValueAt(i,11).toString()+"','','','','','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab");
-=======
                             tabMode.getValueAt(i,11).toString()+"','"+
                             tabMode.getValueAt(i,12).toString()+"','"+
                             tabMode.getValueAt(i,13).toString()+"','"+
                             tabMode.getValueAt(i,14).toString()+"','"+
-                            tabMode.getValueAt(i,15).toString()+"','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab"); 
->>>>>>> upstream/master
+                            tabMode.getValueAt(i,15).toString()+"','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab");
                     }
 
                     Map<String, Object> param = new HashMap<>();
@@ -1275,24 +1271,6 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             tglhasil="";
                         }
                         Sequel.menyimpan("temporary_permintaan_lab","'0','"+
-<<<<<<< HEAD
-                                        tabMode2.getValueAt(i,0).toString()+"','"+
-                                        tabMode2.getValueAt(i,1).toString()+"','"+
-                                        tabMode2.getValueAt(i,2).toString()+"','"+
-                                        tabMode2.getValueAt(i,3).toString()+"','"+
-                                        tabMode2.getValueAt(i,4).toString()+"','"+
-                                        tabMode2.getValueAt(i,5).toString()+"','"+
-                                        tabMode2.getValueAt(i,6).toString()+"','"+
-                                        tabMode2.getValueAt(i,7).toString()+"','"+
-                                        tabMode2.getValueAt(i,8).toString()+"','"+
-                                        tglsampel+"','"+
-                                        tabMode2.getValueAt(i,10).toString()+"','"+
-                                        tglhasil+"','"+
-                                        tabMode2.getValueAt(i,12).toString()+"','"+
-                                        tabMode2.getValueAt(i,13).toString()+"','"+
-                                        tabMode2.getValueAt(i,14).toString()+"','"+
-                                        tabMode2.getValueAt(i,15).toString()+"','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab");
-=======
                             tabMode2.getValueAt(i,0).toString()+"','"+
                             tabMode2.getValueAt(i,1).toString()+"','"+
                             tabMode2.getValueAt(i,2).toString()+"','"+
@@ -1312,8 +1290,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             tabMode2.getValueAt(i,16).toString()+"','"+
                             tabMode2.getValueAt(i,17).toString()+"','"+
                             tabMode2.getValueAt(i,18).toString()+"','"+
-                            tabMode2.getValueAt(i,19).toString()+"','','','','','','','','','','','','','','','','',''","Periksa Lab"); 
->>>>>>> upstream/master
+                            tabMode2.getValueAt(i,19).toString()+"','','','','','','','','','','','','','','','','',''","Periksa Lab");
                     }
 
                     Map<String, Object> param = new HashMap<>();
@@ -1361,15 +1338,11 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                             tabMode3.getValueAt(i,8).toString()+"','"+
                             tabMode3.getValueAt(i,9).toString()+"','"+
                             tabMode3.getValueAt(i,10).toString()+"','"+
-<<<<<<< HEAD
-                            tabMode3.getValueAt(i,11).toString()+"','','','','','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab");
-=======
                             tabMode3.getValueAt(i,11).toString()+"','"+
                             tabMode3.getValueAt(i,12).toString()+"','"+
                             tabMode3.getValueAt(i,13).toString()+"','"+
                             tabMode3.getValueAt(i,14).toString()+"','"+
-                            tabMode3.getValueAt(i,15).toString()+"','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab"); 
->>>>>>> upstream/master
+                            tabMode3.getValueAt(i,15).toString()+"','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab");
                     }
 
                     Map<String, Object> param = new HashMap<>();
@@ -1419,15 +1392,11 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                                         tabMode4.getValueAt(i,12).toString()+"','"+
                                         tabMode4.getValueAt(i,13).toString()+"','"+
                                         tabMode4.getValueAt(i,14).toString()+"','"+
-<<<<<<< HEAD
-                                        tabMode4.getValueAt(i,15).toString()+"','','','','','','','','','','','','','','','','','','','','',''","Periksa Lab");
-=======
                                         tabMode4.getValueAt(i,15).toString()+"','"+
                                         tabMode4.getValueAt(i,16).toString()+"','"+
                                         tabMode4.getValueAt(i,17).toString()+"','"+
                                         tabMode4.getValueAt(i,18).toString()+"','"+
-                                        tabMode4.getValueAt(i,19).toString()+"','','','','','','','','','','','','','','','','',''","Periksa Lab"); 
->>>>>>> upstream/master
+                                        tabMode4.getValueAt(i,19).toString()+"','','','','','','','','','','','','','','','','',''","Periksa Lab");
                     }
 
                     Map<String, Object> param = new HashMap<>();
@@ -2290,7 +2259,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
                 if(NoPermintaan.trim().equals("")){
                     Valid.textKosong(TCari,"No.Permintaan");
-                }else{   
+                }else{
                     try {
                         koneksisysmex=koneksiDBSysmex.condb();
                         ps=koneksi.prepareStatement(
@@ -2334,7 +2303,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         ps2.close();
                                     }
                                 }
-                                
+
                                 koneksisysmex.prepareStatement(
                                         "insert into LIS_ORDER values('0',now(),'NW','"+rs.getString("no_rkm_medis")+"','"+rs.getString("nm_pasien")+"',"+
                                         "'"+rs.getString("alamat")+"','"+rs.getString("nm_kel")+"','"+rs.getString("nm_kec")+"','"+rs.getString("nm_kab")+"',"+
@@ -2342,7 +2311,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         "'"+rs.getString("kd_poli")+"^"+rs.getString("nm_poli")+"','"+rs.getString("dokter_perujuk")+"^"+rs.getString("nm_dokter")+"',"+
                                         "'"+rs.getString("kd_poli")+"','"+pilihan+"','"+rs.getString("diagnosa_klinis")+"','"+rs.getString("no_rawat")+"',"+
                                         "'"+Permintaan+"','0')").executeUpdate();
-                                
+
                                 Permintaan="";
                                 ps2=koneksi.prepareStatement("select id_template from permintaan_detail_permintaan_lab where noorder=?");
                                 try {
@@ -2362,7 +2331,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         ps2.close();
                                     }
                                 }
-                                
+
                                 koneksisysmex.prepareStatement(
                                         "insert into LIS_ORDER_DETAIL values('0',now(),'NW','"+rs.getString("no_rkm_medis")+"','"+rs.getString("nm_pasien")+"',"+
                                         "'"+rs.getString("alamat")+"','"+rs.getString("nm_kel")+"','"+rs.getString("nm_kec")+"','"+rs.getString("nm_kab")+"',"+
@@ -2389,16 +2358,16 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 }
                 TeksKosong();
                 this.setCursor(Cursor.getDefaultCursor());
-            }else{            
+            }else{
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                 TCari.requestFocus();
-            } 
+            }
         }else if(TabPilihRawat.getSelectedIndex()==1){
             if(!NoRawat.equals("")){
                 this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
                 if(NoPermintaan.trim().equals("")){
                     Valid.textKosong(TCari,"No.Permintaan");
-                }else{   
+                }else{
                     try {
                         koneksisysmex=koneksiDBSysmex.condb();
                         ps=koneksi.prepareStatement(
@@ -2443,7 +2412,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         ps2.close();
                                     }
                                 }
-                                
+
                                 koneksisysmex.prepareStatement(
                                         "insert into LIS_ORDER values('0',now(),'NW','"+rs.getString("no_rkm_medis")+"','"+rs.getString("nm_pasien")+"',"+
                                         "'"+rs.getString("alamat")+"','"+rs.getString("nm_kel")+"','"+rs.getString("nm_kec")+"','"+rs.getString("nm_kab")+"',"+
@@ -2451,7 +2420,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         "'"+rs.getString("kd_poli")+"^"+rs.getString("nm_poli")+"','"+rs.getString("dokter_perujuk")+"^"+rs.getString("nm_dokter")+"',"+
                                         "'"+rs.getString("kd_poli")+"','"+pilihan+"','"+rs.getString("diagnosa_klinis")+"','"+rs.getString("no_rawat")+"',"+
                                         "'"+Permintaan+"','0')").executeUpdate();
-                                
+
                                 Permintaan="";
                                 ps2=koneksi.prepareStatement("select id_template from permintaan_detail_permintaan_lab where noorder=?");
                                 try {
@@ -2471,7 +2440,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         ps2.close();
                                     }
                                 }
-                                
+
                                 koneksisysmex.prepareStatement(
                                         "insert into LIS_ORDER_DETAIL values('0',now(),'NW','"+rs.getString("no_rkm_medis")+"','"+rs.getString("nm_pasien")+"',"+
                                         "'"+rs.getString("alamat")+"','"+rs.getString("nm_kel")+"','"+rs.getString("nm_kec")+"','"+rs.getString("nm_kab")+"',"+
@@ -2498,10 +2467,10 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 }
                 TeksKosong();
                 this.setCursor(Cursor.getDefaultCursor());
-            }else{            
+            }else{
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                 TCari.requestFocus();
-            } 
+            }
         }
     }//GEN-LAST:event_MnKirimSysmexActionPerformed
 
@@ -2511,7 +2480,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 if(!NoRawat.equals("")){
                     if(NoPermintaan.trim().equals("")){
                         Valid.textKosong(TCari,"No.Permintaan");
-                    }else{ 
+                    }else{
                         if(Sampel.equals("")){
                             JOptionPane.showMessageDialog(rootPane,"Maaf, silahkan ambil sampel terlebih dahulu..!!");
                         }else{
@@ -2520,7 +2489,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             dlgro.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
                             dlgro.setLocationRelativeTo(internalFrame1);
                             dlgro.emptTeks();
-                            dlgro.isCek(); 
+                            dlgro.isCek();
                             dlgro.setOrderSysmex(NoPermintaan,NoRawat,"Ralan");
                             dlgro.setDokterPerujuk(KodeDokter,DokterPerujuk);
                             TeksKosong();
@@ -2528,10 +2497,10 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             this.setCursor(Cursor.getDefaultCursor());
                         }
                     }
-                }else{            
+                }else{
                     JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                     TCari.requestFocus();
-                } 
+                }
             }else if(TabRawatJalan.getSelectedIndex()==1){
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih Data Permintaan...!!!!");
                 TabRawatJalan.setSelectedIndex(0);
@@ -2542,7 +2511,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 if(!NoRawat.equals("")){
                     if(NoPermintaan.trim().equals("")){
                         Valid.textKosong(TCari,"No.Permintaan");
-                    }else{ 
+                    }else{
                         if(Sampel.equals("")){
                             JOptionPane.showMessageDialog(rootPane,"Maaf, silahkan ambil sampel terlebih dahulu..!!");
                         }else{
@@ -2551,7 +2520,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             dlgro.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
                             dlgro.setLocationRelativeTo(internalFrame1);
                             dlgro.emptTeks();
-                            dlgro.isCek(); 
+                            dlgro.isCek();
                             dlgro.setOrderSysmex(NoPermintaan,NoRawat,"Ranap");
                             dlgro.setDokterPerujuk(KodeDokter,DokterPerujuk);
                             TeksKosong();
@@ -2559,16 +2528,16 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             this.setCursor(Cursor.getDefaultCursor());
                         }
                     }
-                }else{            
+                }else{
                     JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                     TCari.requestFocus();
-                } 
+                }
             }else if(TabRawatInap.getSelectedIndex()==1){
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih Data Permintaan...!!!!");
                 TabRawatInap.setSelectedIndex(0);
                 TCari.requestFocus();
             }
-        } 
+        }
     }//GEN-LAST:event_MnAmbilSysmexActionPerformed
 
     private void MnKirimLISELIMSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnKirimLISELIMSActionPerformed
@@ -2577,7 +2546,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
                 if(NoPermintaan.trim().equals("")){
                     Valid.textKosong(TCari,"No.Permintaan");
-                }else{   
+                }else{
                     try {
                         koneksielims=koneksiDBELIMS.condb();
                         ps=koneksi.prepareStatement(
@@ -2642,16 +2611,16 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 }
                 TeksKosong();
                 this.setCursor(Cursor.getDefaultCursor());
-            }else{            
+            }else{
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                 TCari.requestFocus();
-            } 
+            }
         }else if(TabPilihRawat.getSelectedIndex()==1){
             if(!NoRawat.equals("")){
                 this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
                 if(NoPermintaan.trim().equals("")){
                     Valid.textKosong(TCari,"No.Permintaan");
-                }else{   
+                }else{
                     try {
                         koneksielims=koneksiDBELIMS.condb();
                         ps=koneksi.prepareStatement(
@@ -2682,7 +2651,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                                         "'"+rs.getString("tgl_permintaan")+"','"+rs.getString("jam_permintaan")+"','"+rs.getString("dokter_perujuk")+"','"+rs.getString("nm_dokter")+"',"+
                                         "'"+rs.getString("status")+"','"+rs.getString("kd_kamar")+"','"+rs.getString("nm_bangsal")+"','"+rs.getString("kd_pj")+"','"+rs.getString("png_jawab")+"',"+
                                         "'"+rs.getString("informasi_tambahan")+"','"+rs.getString("diagnosa_klinis")+"')").executeUpdate();
-                                
+
                                 ps2=koneksi.prepareStatement("select noorder, kd_jenis_prw, id_template from permintaan_detail_permintaan_lab where noorder=?");
                                 try {
                                     ps2.setString(1,NoPermintaan);
@@ -2719,10 +2688,10 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 }
                 TeksKosong();
                 this.setCursor(Cursor.getDefaultCursor());
-            }else{            
+            }else{
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                 TCari.requestFocus();
-            } 
+            }
         }
     }//GEN-LAST:event_MnKirimLISELIMSActionPerformed
 
@@ -2732,7 +2701,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 if(!NoRawat.equals("")){
                     if(NoPermintaan.trim().equals("")){
                         Valid.textKosong(TCari,"No.Permintaan");
-                    }else{ 
+                    }else{
                         if(Sampel.equals("")){
                             JOptionPane.showMessageDialog(rootPane,"Maaf, silahkan ambil sampel terlebih dahulu..!!");
                         }else{
@@ -2741,7 +2710,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             dlgro.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
                             dlgro.setLocationRelativeTo(internalFrame1);
                             dlgro.emptTeks();
-                            dlgro.isCek(); 
+                            dlgro.isCek();
                             dlgro.setOrderELIMS(NoPermintaan,NoRawat,"Ralan");
                             dlgro.setDokterPerujuk(KodeDokter,DokterPerujuk);
                             TeksKosong();
@@ -2749,10 +2718,10 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             this.setCursor(Cursor.getDefaultCursor());
                         }
                     }
-                }else{            
+                }else{
                     JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                     TCari.requestFocus();
-                } 
+                }
             }else if(TabRawatJalan.getSelectedIndex()==1){
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih Data Permintaan...!!!!");
                 TabRawatJalan.setSelectedIndex(0);
@@ -2763,7 +2732,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                 if(!NoRawat.equals("")){
                     if(NoPermintaan.trim().equals("")){
                         Valid.textKosong(TCari,"No.Permintaan");
-                    }else{ 
+                    }else{
                         if(Sampel.equals("")){
                             JOptionPane.showMessageDialog(rootPane,"Maaf, silahkan ambil sampel terlebih dahulu..!!");
                         }else{
@@ -2772,7 +2741,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             dlgro.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
                             dlgro.setLocationRelativeTo(internalFrame1);
                             dlgro.emptTeks();
-                            dlgro.isCek(); 
+                            dlgro.isCek();
                             dlgro.setOrderELIMS(NoPermintaan,NoRawat,"Ranap");
                             dlgro.setDokterPerujuk(KodeDokter,DokterPerujuk);
                             TeksKosong();
@@ -2780,16 +2749,16 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                             this.setCursor(Cursor.getDefaultCursor());
                         }
                     }
-                }else{            
+                }else{
                     JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data permintaan...!!!!");
                     TCari.requestFocus();
-                } 
+                }
             }else if(TabRawatInap.getSelectedIndex()==1){
                 JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih Data Permintaan...!!!!");
                 TabRawatInap.setSelectedIndex(0);
                 TCari.requestFocus();
             }
-        } 
+        }
     }//GEN-LAST:event_MnAmbilLISELIMSActionPerformed
 
     /**
@@ -2894,7 +2863,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                     "pasien.nm_pasien like ? or permintaan_lab.diagnosa_klinis like ? or dokter.nm_dokter like ? or penjab.png_jawab like ?)")+
                     "order by permintaan_lab.tgl_permintaan,permintaan_lab.jam_permintaan desc");
             try {
-                
+
                 ps.setString(1,Valid.SetTgl(Tgl1.getSelectedItem()+""));
                 ps.setString(2,Valid.SetTgl(Tgl2.getSelectedItem()+""));
                 if(!semua){
@@ -2907,8 +2876,8 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                     ps.setString(9,"%"+TCari.getText()+"%");
                     ps.setString(10,"%"+TCari.getText()+"%");
                     ps.setString(11,"%"+TCari.getText()+"%");
-                }   
-                    
+                }
+
                 rs=ps.executeQuery();
                 while(rs.next()){
                     tabMode.addRow(new String[]{
@@ -3030,7 +2999,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                     ps.setString(12,"%"+TCari.getText()+"%");
                     ps.setString(13,"%"+TCari.getText()+"%");
                 }
-                
+
                 rs=ps.executeQuery();
                 while(rs.next()){
                     la="";ld="";pa="";pd="";
@@ -3201,7 +3170,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                     ps.setString(10,"%"+TCari.getText()+"%");
                     ps.setString(11,"%"+TCari.getText()+"%");
                 }
-                    
+
                 rs=ps.executeQuery();
                 while(rs.next()){
                     tabMode3.addRow(new String[]{
@@ -3325,7 +3294,7 @@ private void tbLabRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
                     ps.setString(12,"%"+TCari.getText()+"%");
                     ps.setString(13,"%"+TCari.getText()+"%");
                 }
-                    
+
                 rs=ps.executeQuery();
                 while(rs.next()){
                     la="";ld="";pa="";pd="";

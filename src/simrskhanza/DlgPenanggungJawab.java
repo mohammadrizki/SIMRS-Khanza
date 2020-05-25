@@ -43,7 +43,7 @@ public final class DlgPenanggungJawab extends javax.swing.JDialog {
     private PreparedStatement ps;
     private ResultSet rs;
     private int i=0;
-    
+
     /** Creates new form DlgPenyakit
      * @param parent
      * @param modal */
@@ -94,7 +94,7 @@ public final class DlgPenanggungJawab extends javax.swing.JDialog {
             }
         }
         tbKamar.setDefaultRenderer(Object.class, new WarnaTable());
-        
+
         KdAsuransi.setDocument(new batasInput((byte)3).getKata(KdAsuransi));
         NmAsuransi.setDocument(new batasInput((byte)30).getKata(NmAsuransi));
         Perusahaan.setDocument(new batasInput((int)60).getKata(Perusahaan));
@@ -123,11 +123,11 @@ public final class DlgPenanggungJawab extends javax.swing.JDialog {
                     }
                 }
             });
-        } 
-        
+        }
+
         ChkInput.setSelected(false);
-        isForm();  
-        
+        isForm();
+
     }
 
 
@@ -191,12 +191,8 @@ public final class DlgPenanggungJawab extends javax.swing.JDialog {
                 formWindowOpened(evt);
             }
         });
-
-<<<<<<< HEAD
+        
         internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 253, 247)), "::[ Penanggung Pasien/Asuransi/Askes ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
-=======
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Penanggung Pasien/Asuransi/Askes ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
->>>>>>> upstream/master
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -584,11 +580,11 @@ public final class DlgPenanggungJawab extends javax.swing.JDialog {
 }//GEN-LAST:event_BtnBatalKeyPressed
 
     private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHapusActionPerformed
-        for(i=0;i<tbKamar.getRowCount();i++){ 
+        for(i=0;i<tbKamar.getRowCount();i++){
             if(tbKamar.getValueAt(i,0).toString().equals("true")){
                 Sequel.meghapus("penjab","kd_pj",tbKamar.getValueAt(i,1).toString());
             }
-        } 
+        }
         BtnCariActionPerformed(evt);
         emptTeks();
 }//GEN-LAST:event_BtnHapusActionPerformed
@@ -645,14 +641,14 @@ public final class DlgPenanggungJawab extends javax.swing.JDialog {
         if(tabMode.getRowCount()==0){
             JOptionPane.showMessageDialog(null,"Maaf, data sudah habis. Tidak ada data yang bisa anda print...!!!!");
             BtnBatal.requestFocus();
-        }else if(tabMode.getRowCount()!=0){       
-                Map<String, Object> param = new HashMap<>();    
+        }else if(tabMode.getRowCount()!=0){
+                Map<String, Object> param = new HashMap<>();
                 param.put("namars",akses.getnamars());
                 param.put("alamatrs",akses.getalamatrs());
                 param.put("kotars",akses.getkabupatenrs());
                 param.put("propinsirs",akses.getpropinsirs());
                 param.put("kontakrs",akses.getkontakrs());
-                param.put("emailrs",akses.getemailrs());       
+                param.put("emailrs",akses.getemailrs());
             Valid.MyReportqry("rptPenjab.jasper","report","::[ Data Satuan ]::","select kd_pj, png_jawab, nama_perusahaan, alamat_asuransi, no_telp,attn "+
                 " from penjab where  kd_pj like '%"+TCari.getText().trim()+"%' or "+
                 " png_jawab like '%"+TCari.getText().trim()+"%' order by kd_pj",param);
@@ -850,7 +846,7 @@ private void NmAsuransiKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
         AlamatAsuransi.setText("");
         Attn.setText("");
         NoTelp.setText("0");
-        KdAsuransi.requestFocus();        
+        KdAsuransi.requestFocus();
         Valid.autoNomer("penjab","A",2,KdAsuransi);
     }
 
@@ -869,29 +865,29 @@ private void NmAsuransiKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
     public JTable getTable(){
         return tbKamar;
     }
-    
-    public void onCari(){        
+
+    public void onCari(){
         TCari.requestFocus();
     }
-    
+
     public void isCek(){
         BtnSimpan.setEnabled(akses.getadmin());
         BtnHapus.setEnabled(akses.getadmin());
         BtnEdit.setEnabled(akses.getadmin());
         BtnPrint.setEnabled(akses.getadmin());
     }
-    
+
     private void isForm(){
         if(ChkInput.isSelected()==true){
             ChkInput.setVisible(false);
             PanelInput.setPreferredSize(new Dimension(WIDTH,128));
-            FormInput.setVisible(true);      
+            FormInput.setVisible(true);
             ChkInput.setVisible(true);
-        }else if(ChkInput.isSelected()==false){           
-            ChkInput.setVisible(false);            
+        }else if(ChkInput.isSelected()==false){
+            ChkInput.setVisible(false);
             PanelInput.setPreferredSize(new Dimension(WIDTH,20));
-            FormInput.setVisible(false);      
+            FormInput.setVisible(false);
             ChkInput.setVisible(true);
         }
-    } 
+    }
 }

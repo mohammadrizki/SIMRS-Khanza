@@ -1877,51 +1877,6 @@ public class DlgPasien extends javax.swing.JDialog {
         });
         MenuIdentitas.add(MnIdentitas);
 
-<<<<<<< HEAD
-=======
-        MnIdentitas2.setBackground(new java.awt.Color(255, 255, 254));
-        MnIdentitas2.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnIdentitas2.setForeground(new java.awt.Color(50, 50, 50));
-        MnIdentitas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnIdentitas2.setText("Identitas Pasien 2");
-        MnIdentitas2.setName("MnIdentitas2"); // NOI18N
-        MnIdentitas2.setPreferredSize(new java.awt.Dimension(200, 26));
-        MnIdentitas2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnIdentitas2ActionPerformed(evt);
-            }
-        });
-        MenuIdentitas.add(MnIdentitas2);
-
-        MnIdentitas3.setBackground(new java.awt.Color(255, 255, 254));
-        MnIdentitas3.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnIdentitas3.setForeground(new java.awt.Color(50, 50, 50));
-        MnIdentitas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnIdentitas3.setText("Identitas Pasien 3");
-        MnIdentitas3.setName("MnIdentitas3"); // NOI18N
-        MnIdentitas3.setPreferredSize(new java.awt.Dimension(200, 26));
-        MnIdentitas3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnIdentitas3ActionPerformed(evt);
-            }
-        });
-        MenuIdentitas.add(MnIdentitas3);
-
-        MnIdentitas4.setBackground(new java.awt.Color(255, 255, 254));
-        MnIdentitas4.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnIdentitas4.setForeground(new java.awt.Color(50, 50, 50));
-        MnIdentitas4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnIdentitas4.setText("Identitas Pasien 4");
-        MnIdentitas4.setName("MnIdentitas4"); // NOI18N
-        MnIdentitas4.setPreferredSize(new java.awt.Dimension(200, 26));
-        MnIdentitas4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MnIdentitas4ActionPerformed(evt);
-            }
-        });
-        MenuIdentitas.add(MnIdentitas4);
-
->>>>>>> upstream/master
         jPopupMenu1.add(MenuIdentitas);
 
         MnKartuStatus.setBackground(new java.awt.Color(255, 255, 254));
@@ -3100,11 +3055,7 @@ public class DlgPasien extends javax.swing.JDialog {
         FormInput.add(jLabel13);
         jLabel13.setBounds(5, 65, 95, 23);
 
-<<<<<<< HEAD
-        DTPLahir.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-02-2020" }));
-=======
         DTPLahir.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "14-04-2020" }));
->>>>>>> upstream/master
         DTPLahir.setDisplayFormat("dd-MM-yyyy");
         DTPLahir.setName("DTPLahir"); // NOI18N
         DTPLahir.setOpaque(false);
@@ -3241,11 +3192,7 @@ public class DlgPasien extends javax.swing.JDialog {
         FormInput.add(TKtp);
         TKtp.setBounds(730, 5, 130, 23);
 
-<<<<<<< HEAD
-        DTPDaftar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-02-2020" }));
-=======
         DTPDaftar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "14-04-2020" }));
->>>>>>> upstream/master
         DTPDaftar.setDisplayFormat("dd-MM-yyyy");
         DTPDaftar.setName("DTPDaftar"); // NOI18N
         DTPDaftar.setOpaque(false);
@@ -4573,11 +4520,9 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                             emptTeks();
                         }else{
                             autoNomor();
-<<<<<<< HEAD
+
                             if(Sequel.menyimpantf2("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",38,new String[]{
-=======
-                            if(Sequel.menyimpantf("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",36,new String[]{
->>>>>>> upstream/master
+
                                     TNo.getText(),TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
                                     Valid.SetTgl(DTPLahir.getSelectedItem()+""),NmIbu.getText(),
                                     Alamat.getText().replaceAll("ALAMAT",""),CMbGd.getSelectedItem().toString(),Pekerjaan.getText(),CmbStts.getSelectedItem().toString(),cmbAgama.getSelectedItem().toString(),
@@ -7762,7 +7707,6 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
         }
     }//GEN-LAST:event_MnKartu6ActionPerformed
 
-<<<<<<< HEAD
     private void KdpnjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KdpnjActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_KdpnjActionPerformed
@@ -7786,7 +7730,7 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
     private void R6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_R6ActionPerformed
-=======
+
     private void ppPasienCoronaBtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppPasienCoronaBtnPrintActionPerformed
         if(tabMode.getRowCount()==0){
             JOptionPane.showMessageDialog(null,"Maaf, data pasien sudah habis...!!!!");
@@ -7805,7 +7749,6 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
             this.setCursor(Cursor.getDefaultCursor());
         }
     }//GEN-LAST:event_ppPasienCoronaBtnPrintActionPerformed
->>>>>>> upstream/master
 
     /**
      * @data args the command line arguments

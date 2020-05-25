@@ -1970,17 +1970,13 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         }
 
     }
-<<<<<<< HEAD
 
-    private void tampilLICA(String order) {
-=======
-    
-    private void tampilELIMS(String order) { 
+    private void tampilELIMS(String order) {
         try {
             koneksielims=koneksiDBELIMS.condb();
             Valid.tabelKosong(tabMode);
-            
-            for(i2=0;i2<tbTarif.getRowCount();i2++){ 
+
+            for(i2=0;i2<tbTarif.getRowCount();i2++){
                 if(tbTarif.getValueAt(i2,0).toString().equals("true")){
                     tabMode.addRow(new Object[]{true,tbTarif.getValueAt(i2,2).toString(),"","","","","",0,0,0,0,0,0,0,0});
                     pstampil=koneksi.prepareStatement(
@@ -2020,7 +2016,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                                          rstampil.getDouble("kso"),
                                          rstampil.getDouble("menejemen")
                                     });
-                                        
+
                                 }
                             } catch (Exception e) {
                                 System.out.println("Notif : "+e);
@@ -2042,17 +2038,16 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                         if(pstampil!=null){
                             pstampil.close();
                         }
-                    }                      
+                    }
                 }
             }
         } catch (Exception e) {
             System.out.println("Error Detail : "+e);
         }
-        
+
     }
-    
-    private void tampilLICA(String order) { 
->>>>>>> upstream/master
+
+    private void tampilLICA(String order) {
         try {
             Valid.tabelKosong(tabMode);
             for(i2=0;i2<tbTarif.getRowCount();i2++){
@@ -2600,10 +2595,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         tampiltarif(order);
         tampilSysmex(order);
     }
-<<<<<<< HEAD
 
-=======
-    
     public void setOrderELIMS(String order,String norawat,String posisi){
         noorder=order;
         TNoRw.setText(norawat);
@@ -2611,7 +2603,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         isRawat2();
         try {
             pssetpj=koneksi.prepareStatement("select * from set_pjlab");
-            try {                              
+            try {
                 rssetpj=pssetpj.executeQuery();
                 while(rssetpj.next()){
                     KodePj.setText(rssetpj.getString(1));
@@ -2626,7 +2618,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 if(pssetpj!=null){
                     pssetpj.close();
                 }
-            }              
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -2635,7 +2627,6 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         tampilELIMS(order);
     }
     
->>>>>>> upstream/master
     public void setOrderLICA(String order,String norawat,String posisi){
         noorder=order;
         TNoRw.setText(norawat);
