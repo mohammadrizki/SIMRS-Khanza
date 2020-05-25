@@ -27,6 +27,7 @@ import inventory.DlgCopyResep;
 import inventory.DlgPeresepanDokter;
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -36,9 +37,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -119,35 +122,51 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 
         for (i = 0; i < 13; i++) {
             TableColumn column = tbRawatDr.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(105);
-            }else if(i==2){
-                column.setPreferredWidth(70);
-            }else if(i==3){
-                column.setPreferredWidth(180);
-            }else if(i==4){
-                column.setPreferredWidth(180);
-            }else if(i==5){
-                column.setPreferredWidth(90);
-            }else if(i==6){
-                column.setPreferredWidth(180);
-            }else if(i==7){
-                column.setPreferredWidth(80);
-            }else if(i==8){
-                column.setPreferredWidth(75);
-            }else if(i==9){
-                column.setPreferredWidth(90);
-            }else if(i==10){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==11){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==12){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(180);
+                    break;
+                case 5:
+                    column.setPreferredWidth(90);
+                    break;
+                case 6:
+                    column.setPreferredWidth(180);
+                    break;
+                case 7:
+                    column.setPreferredWidth(80);
+                    break;
+                case 8:
+                    column.setPreferredWidth(75);
+                    break;
+                case 9:
+                    column.setPreferredWidth(90);
+                    break;
+                case 10:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 11:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 12:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                default:
+                    break;
             }
         }
         tbRawatDr.setDefaultRenderer(Object.class, new WarnaTable());
@@ -180,35 +199,51 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 
         for (i = 0; i < 13; i++) {
             TableColumn column = tbRawatPr.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(105);
-            }else if(i==2){
-                column.setPreferredWidth(70);
-            }else if(i==3){
-                column.setPreferredWidth(180);
-            }else if(i==4){
-                column.setPreferredWidth(180);
-            }else if(i==5){
-                column.setPreferredWidth(90);
-            }else if(i==6){
-                column.setPreferredWidth(180);
-            }else if(i==7){
-                column.setPreferredWidth(80);
-            }else if(i==8){
-                column.setPreferredWidth(75);
-            }else if(i==9){
-                column.setPreferredWidth(90);
-            }else if(i==10){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==11){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==12){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(180);
+                    break;
+                case 5:
+                    column.setPreferredWidth(90);
+                    break;
+                case 6:
+                    column.setPreferredWidth(180);
+                    break;
+                case 7:
+                    column.setPreferredWidth(80);
+                    break;
+                case 8:
+                    column.setPreferredWidth(75);
+                    break;
+                case 9:
+                    column.setPreferredWidth(90);
+                    break;
+                case 10:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 11:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 12:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                default:
+                    break;
             }
         }
         tbRawatPr.setDefaultRenderer(Object.class, new WarnaTable());
@@ -242,42 +277,61 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 
         for (i = 0; i < 16; i++) {
             TableColumn column = tbRawatDrPr.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(105);
-            }else if(i==2){
-                column.setPreferredWidth(70);
-            }else if(i==3){
-                column.setPreferredWidth(180);
-            }else if(i==4){
-                column.setPreferredWidth(180);
-            }else if(i==5){
-                column.setPreferredWidth(90);
-            }else if(i==6){
-                column.setPreferredWidth(180);
-            }else if(i==7){
-                column.setPreferredWidth(90);
-            }else if(i==8){
-                column.setPreferredWidth(180);
-            }else if(i==9){
-                column.setPreferredWidth(80);
-            }else if(i==10){
-                column.setPreferredWidth(75);
-            }else if(i==11){
-                column.setPreferredWidth(90);
-            }else if(i==12){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==13){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==14){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==15){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(180);
+                    break;
+                case 5:
+                    column.setPreferredWidth(90);
+                    break;
+                case 6:
+                    column.setPreferredWidth(180);
+                    break;
+                case 7:
+                    column.setPreferredWidth(90);
+                    break;
+                case 8:
+                    column.setPreferredWidth(180);
+                    break;
+                case 9:
+                    column.setPreferredWidth(80);
+                    break;
+                case 10:
+                    column.setPreferredWidth(75);
+                    break;
+                case 11:
+                    column.setPreferredWidth(90);
+                    break;
+                case 12:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 13:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 14:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 15:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                default:
+                    break;
             }
         }
         tbRawatDrPr.setDefaultRenderer(Object.class, new WarnaTable());
@@ -312,44 +366,66 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 
         for (i = 0; i < 19; i++) {
             TableColumn column = tbPemeriksaan.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(105);
-            }else if(i==2){
-                column.setPreferredWidth(70);
-            }else if(i==3){
-                column.setPreferredWidth(180);
-            }else if(i==4){
-                column.setPreferredWidth(80);
-            }else if(i==5){
-                column.setPreferredWidth(75);
-            }else if(i==6){
-                column.setPreferredWidth(75);
-            }else if(i==7){
-                column.setPreferredWidth(75);
-            }else if(i==8){
-                column.setPreferredWidth(75);
-            }else if(i==9){
-                column.setPreferredWidth(90);
-            }else if(i==10){
-                column.setPreferredWidth(75);
-            }else if(i==11){
-                column.setPreferredWidth(75);
-            }else if(i==12){
-                column.setPreferredWidth(75);
-            }else if(i==13){
-                column.setPreferredWidth(180);
-            }else if(i==14){
-                column.setPreferredWidth(180);
-            }else if(i==15){
-                column.setPreferredWidth(130);
-            }else if(i==16){
-                column.setPreferredWidth(50);
-            }else if(i==17){
-                column.setPreferredWidth(180);
-            }else if(i==18){
-                column.setPreferredWidth(180);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(80);
+                    break;
+                case 5:
+                    column.setPreferredWidth(75);
+                    break;
+                case 6:
+                    column.setPreferredWidth(75);
+                    break;
+                case 7:
+                    column.setPreferredWidth(75);
+                    break;
+                case 8:
+                    column.setPreferredWidth(75);
+                    break;
+                case 9:
+                    column.setPreferredWidth(90);
+                    break;
+                case 10:
+                    column.setPreferredWidth(75);
+                    break;
+                case 11:
+                    column.setPreferredWidth(75);
+                    break;
+                case 12:
+                    column.setPreferredWidth(75);
+                    break;
+                case 13:
+                    column.setPreferredWidth(180);
+                    break;
+                case 14:
+                    column.setPreferredWidth(180);
+                    break;
+                case 15:
+                    column.setPreferredWidth(130);
+                    break;
+                case 16:
+                    column.setPreferredWidth(50);
+                    break;
+                case 17:
+                    column.setPreferredWidth(180);
+                    break;
+                case 18:
+                    column.setPreferredWidth(180);
+                    break;
+                default:
+                    break;
             }
         }
         tbPemeriksaan.setDefaultRenderer(Object.class, new WarnaTable());
@@ -388,58 +464,87 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         
         for (i = 0; i < 26; i++) {
             TableColumn column = tbPemeriksaanObstetri.getColumnModel().getColumn(i);
-            if(i==0) {
-                column.setPreferredWidth(20);
-            }else if(i==1) {
-                column.setPreferredWidth(105);
-            }else if(i==2) {
-                column.setPreferredWidth(70);
-            }else if(i==3) {
-                column.setPreferredWidth(180);
-            }else if(i==4) {
-                column.setPreferredWidth(80);
-            }else if(i==5) {
-                column.setPreferredWidth(70);
-            }else if(i==6) {
-                column.setPreferredWidth(80);
-            }else if(i==7) {
-                column.setPreferredWidth(60);
-            }else if(i==8) {
-                column.setPreferredWidth(60);
-            }else if(i==9) {
-                column.setPreferredWidth(60);
-            }else if(i==10) {
-                column.setPreferredWidth(60);
-            }else if(i==11) {
-                column.setPreferredWidth(60);
-            }else if(i==12) {
-                column.setPreferredWidth(70);
-            }else if(i==13) {
-                column.setPreferredWidth(80);
-            }else if(i==14) {
-                column.setPreferredWidth(50);
-            }else if(i==15) {
-                column.setPreferredWidth(40);
-            }else if(i==16) {
-                column.setPreferredWidth(170);
-            }else if(i==17) {
-                column.setPreferredWidth(170);
-            }else if(i==18) {
-                column.setPreferredWidth(60);
-            }else if(i==19) {
-                column.setPreferredWidth(50);
-            }else if(i==20) {
-                column.setPreferredWidth(60);
-            }else if(i==21) {
-                column.setPreferredWidth(170);
-            }else if(i==22) {
-                column.setPreferredWidth(170);
-            }else if(i==23) {
-                column.setPreferredWidth(170);
-            }else if(i==24) {
-                column.setPreferredWidth(50);
-            }else if(i==25) {
-                column.setPreferredWidth(70);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(80);
+                    break;
+                case 5:
+                    column.setPreferredWidth(70);
+                    break;
+                case 6:
+                    column.setPreferredWidth(80);
+                    break;
+                case 7:
+                    column.setPreferredWidth(60);
+                    break;
+                case 8:
+                    column.setPreferredWidth(60);
+                    break;
+                case 9:
+                    column.setPreferredWidth(60);
+                    break;
+                case 10:
+                    column.setPreferredWidth(60);
+                    break;
+                case 11:
+                    column.setPreferredWidth(60);
+                    break;
+                case 12:
+                    column.setPreferredWidth(70);
+                    break;
+                case 13:
+                    column.setPreferredWidth(80);
+                    break;
+                case 14:
+                    column.setPreferredWidth(50);
+                    break;
+                case 15:
+                    column.setPreferredWidth(40);
+                    break;
+                case 16:
+                    column.setPreferredWidth(170);
+                    break;
+                case 17:
+                    column.setPreferredWidth(170);
+                    break;
+                case 18:
+                    column.setPreferredWidth(60);
+                    break;
+                case 19:
+                    column.setPreferredWidth(50);
+                    break;
+                case 20:
+                    column.setPreferredWidth(60);
+                    break;
+                case 21:
+                    column.setPreferredWidth(170);
+                    break;
+                case 22:
+                    column.setPreferredWidth(170);
+                    break;
+                case 23:
+                    column.setPreferredWidth(170);
+                    break;
+                case 24:
+                    column.setPreferredWidth(50);
+                    break;
+                case 25:
+                    column.setPreferredWidth(70);
+                    break;
+                default:
+                    break;
             }
         }
         tbPemeriksaanObstetri.setDefaultRenderer(Object.class, new WarnaTable());
@@ -481,53 +586,79 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         
         for (i = 0; i < 23; i++) {
             TableColumn column = tbPemeriksaanGinekologi.getColumnModel().getColumn(i);
-            if(i==0) {
-                column.setPreferredWidth(20);
-            }else if(i==1) {
-                column.setPreferredWidth(105);
-            }else if(i==2) {
-                column.setPreferredWidth(70);
-            }else if(i==3) {
-                column.setPreferredWidth(180);
-            }else if(i==4) {
-                column.setPreferredWidth(80);
-            }else if(i==5) {
-                column.setPreferredWidth(70);
-            }else if(i==6) {
-                column.setPreferredWidth(200);
-            }else if(i==7) {
-                column.setPreferredWidth(200);
-            }else if(i==8) {
-                column.setPreferredWidth(200);
-            }else if(i==9) {
-                column.setPreferredWidth(42);
-            }else if(i==10) {
-                column.setPreferredWidth(62);
-            }else if(i==11) {
-                column.setPreferredWidth(200);
-            }else if(i==12) {
-                column.setPreferredWidth(200);
-            }else if(i==13) {
-                column.setPreferredWidth(200);
-            }else if(i==14) {
-                column.setPreferredWidth(200);
-            }else if(i==15) {
-                column.setPreferredWidth(200);
-            }else if(i==16) {
-                column.setPreferredWidth(200);
-            }else if(i==17) {
-                column.setPreferredWidth(50);
-            }else if(i==18) {
-                column.setPreferredWidth(200);
-            }else if(i==19) {
-                column.setPreferredWidth(67);
-            }else if(i==20) {
-                column.setPreferredWidth(200);
-            }else if(i==21) {
-                column.setPreferredWidth(200);
-            }else if(i==22) {
-                column.setPreferredWidth(200);
-            }  
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(80);
+                    break;
+                case 5:
+                    column.setPreferredWidth(70);
+                    break;
+                case 6:
+                    column.setPreferredWidth(200);
+                    break;
+                case 7:
+                    column.setPreferredWidth(200);
+                    break;
+                case 8:
+                    column.setPreferredWidth(200);
+                    break;
+                case 9:
+                    column.setPreferredWidth(42);
+                    break;
+                case 10:
+                    column.setPreferredWidth(62);
+                    break;
+                case 11:
+                    column.setPreferredWidth(200);
+                    break;
+                case 12:
+                    column.setPreferredWidth(200);
+                    break;
+                case 13:
+                    column.setPreferredWidth(200);
+                    break;
+                case 14:
+                    column.setPreferredWidth(200);
+                    break;
+                case 15:  
+                    column.setPreferredWidth(200);
+                    break;
+                case 16:
+                    column.setPreferredWidth(200);
+                    break;
+                case 17:
+                    column.setPreferredWidth(50);
+                    break;
+                case 18:
+                    column.setPreferredWidth(200);
+                    break;
+                case 19:
+                    column.setPreferredWidth(67);
+                    break;
+                case 20:
+                    column.setPreferredWidth(200);
+                    break;
+                case 21:
+                    column.setPreferredWidth(200);
+                    break;
+                case 22:
+                    column.setPreferredWidth(200);
+                    break;
+                default:
+                    break;
+            }
         }
         tbPemeriksaanGinekologi.setDefaultRenderer(Object.class, new WarnaTable());
         
@@ -558,34 +689,46 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         tbTindakan.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         for (i = 0; i < 11; i++) {
             TableColumn column = tbTindakan.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(90);
-            }else if(i==2){
-                column.setPreferredWidth(420);
-            }else if(i==3){
-                column.setPreferredWidth(150);
-            }else if(i==5){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==6){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==7){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==8){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==9){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==10){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else{
-                column.setPreferredWidth(90);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(90);
+                    break;
+                case 2:
+                    column.setPreferredWidth(420);
+                    break;
+                case 3:
+                    column.setPreferredWidth(150);
+                    break;
+                case 5:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 6:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 7:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 8:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 9:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 10:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                default:
+                    column.setPreferredWidth(90);
+                    break;
             }
         }
         tbTindakan.setDefaultRenderer(Object.class, new WarnaTable());
@@ -617,34 +760,46 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         tbTindakan2.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         for (i = 0; i < 11; i++) {
             TableColumn column = tbTindakan2.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(90);
-            }else if(i==2){
-                column.setPreferredWidth(420);
-            }else if(i==3){
-                column.setPreferredWidth(150);
-            }else if(i==5){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==6){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==7){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==8){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==9){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==10){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else{
-                column.setPreferredWidth(90);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(90);
+                    break;
+                case 2:
+                    column.setPreferredWidth(420);
+                    break;
+                case 3:
+                    column.setPreferredWidth(150);
+                    break;
+                case 5:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 6:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 7:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 8:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 9:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 10:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                default:
+                    column.setPreferredWidth(90);
+                    break;
             }
         }
         tbTindakan2.setDefaultRenderer(Object.class, new WarnaTable());
@@ -676,34 +831,46 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         tbTindakan3.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         for (i = 0; i < 11; i++) {
             TableColumn column = tbTindakan3.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(90);
-            }else if(i==2){
-                column.setPreferredWidth(420);
-            }else if(i==3){
-                column.setPreferredWidth(150);
-            }else if(i==5){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==6){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==7){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==8){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==9){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else if(i==10){
-                column.setMinWidth(0);
-                column.setMaxWidth(0);
-            }else{
-                column.setPreferredWidth(90);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(90);
+                    break;
+                case 2:
+                    column.setPreferredWidth(420);
+                    break;
+                case 3:
+                    column.setPreferredWidth(150);
+                    break;
+                case 5:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 6:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 7:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 8:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 9:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                case 10:
+                    column.setMinWidth(0);
+                    column.setMaxWidth(0);
+                    break;
+                default:
+                    column.setPreferredWidth(90);
+                    break;
             }
         }
         tbTindakan3.setDefaultRenderer(Object.class, new WarnaTable());
@@ -733,24 +900,36 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 
         for (i = 0; i < 9; i++) {
             TableColumn column = tbCatatan.getColumnModel().getColumn(i);
-            if(i==0){
-                column.setPreferredWidth(20);
-            }else if(i==1){
-                column.setPreferredWidth(105);
-            }else if(i==2){
-                column.setPreferredWidth(70);
-            }else if(i==3){
-                column.setPreferredWidth(180);
-            }else if(i==4){
-                column.setPreferredWidth(80);
-            }else if(i==5){
-                column.setPreferredWidth(75);
-            }else if(i==6){
-                column.setPreferredWidth(80);
-            }else if(i==7){
-                column.setPreferredWidth(150);
-            }else if(i==8){
-                column.setPreferredWidth(700);
+            switch (i) {
+                case 0:
+                    column.setPreferredWidth(20);
+                    break;
+                case 1:
+                    column.setPreferredWidth(105);
+                    break;
+                case 2:
+                    column.setPreferredWidth(70);
+                    break;
+                case 3:
+                    column.setPreferredWidth(180);
+                    break;
+                case 4:
+                    column.setPreferredWidth(80);
+                    break;
+                case 5:
+                    column.setPreferredWidth(75);
+                    break;
+                case 6:
+                    column.setPreferredWidth(80);
+                    break;
+                case 7:
+                    column.setPreferredWidth(150);
+                    break;
+                case 8:
+                    column.setPreferredWidth(700);
+                    break;
+                default:
+                    break;
             }
         }
         tbCatatan.setDefaultRenderer(Object.class, new WarnaTable());
@@ -906,19 +1085,25 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
             public void windowClosed(WindowEvent e) {
                 if(akses.getform().equals("DlgRawatJalan")){
                     if(dokter.getTable().getSelectedRow()!= -1){
-                        if(TabRawat.getSelectedIndex()==0){
-                            KdDok.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());
-                            TDokter.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
-                            KdDok.requestFocus();
-                        }else if(TabRawat.getSelectedIndex()==2){
-                            KdDok2.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());
-                            TDokter2.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
-                            KdDok2.requestFocus();
-                        }else if(TabRawat.getSelectedIndex()==8){
-                            KdDok3.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());
-                            TDokter3.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
-                            KdDok3.requestFocus();
-                        }                         
+                        switch (TabRawat.getSelectedIndex()) {
+                            case 0:
+                                KdDok.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());
+                                TDokter.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
+                                KdDok.requestFocus();
+                                break;
+                            case 2:
+                                KdDok2.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());
+                                TDokter2.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
+                                KdDok2.requestFocus();
+                                break;
+                            case 8:
+                                KdDok3.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),0).toString());                         
+                                TDokter3.setText(dokter.getTable().getValueAt(dokter.getTable().getSelectedRow(),1).toString());
+                                KdDok3.requestFocus();
+                                break;
+                            default:
+                                break;
+                        }
                     }                      
                 }
             }
@@ -1068,7 +1253,7 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         try {
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
             aktifkanparsial=prop.getProperty("AKTIFKANBILLINGPARSIAL");
-        } catch (Exception ex) {            
+        } catch (IOException ex) {            
             aktifkanparsial="no";
         }
         
@@ -1083,7 +1268,7 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
                     poli_ralan="Yes";
                     cara_bayar_ralan="Yes";
                 }  
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             }finally{
                 if(rsset_tarif != null){
@@ -1093,7 +1278,7 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
                     psset_tarif.close();
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Notifikasi : "+e);
         } 
     }
@@ -3499,20 +3684,30 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
             kd_pj=Sequel.cariIsi("select kd_pj from reg_periksa where no_rawat=?",TNoRw.getText());
             kode_poli=Sequel.cariIsi("select kd_poli from reg_periksa where no_rawat=?",TNoRw.getText());
         }else{         
-            if(TabRawat.getSelectedIndex()==0){
-                Valid.pindah(evt,DTPTgl,KdDok);
-            }else if(TabRawat.getSelectedIndex()==1){
-                Valid.pindah(evt,DTPTgl,kdptg);
-            }else if(TabRawat.getSelectedIndex()==2){
-                Valid.pindah(evt,DTPTgl,KdDok2);
-            }else if(TabRawat.getSelectedIndex()==3){
-                Valid.pindah(evt,DTPTgl,TKeluhan);
-            }else if(TabRawat.getSelectedIndex()==4){
-                Valid.pindah(evt,DTPTgl,TTinggi_uteri);
-            }else if(TabRawat.getSelectedIndex()==5){
-                Valid.pindah(evt,DTPTgl,TInspeksi);
-            }else if(TabRawat.getSelectedIndex()==8){
-                Valid.pindah(evt,DTPTgl,KdDok3);
+            switch (TabRawat.getSelectedIndex()) {
+                case 0:
+                    Valid.pindah(evt,DTPTgl,KdDok);
+                    break;
+                case 1:
+                    Valid.pindah(evt,DTPTgl,kdptg);
+                    break;
+                case 2:
+                    Valid.pindah(evt,DTPTgl,KdDok2);
+                    break;
+                case 3:
+                    Valid.pindah(evt,DTPTgl,TKeluhan);
+                    break;
+                case 4:
+                    Valid.pindah(evt,DTPTgl,TTinggi_uteri);
+                    break;
+                case 5:
+                    Valid.pindah(evt,DTPTgl,TInspeksi);
+                    break;
+                case 8:
+                    Valid.pindah(evt,DTPTgl,KdDok3);
+                    break;
+                default:
+                    break;
             }
         }
 }//GEN-LAST:event_TNoRwKeyPressed
@@ -3541,7 +3736,7 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
                                     SimpanPenangananDokter();
                                 }
                             } 
-                        } catch (Exception e) {
+                        } catch (HeadlessException e) {
                         }                      
                     } 
                     break;
@@ -3564,7 +3759,7 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
                                     SimpanPenangananPetugas();
                                 }
                             } 
-                        } catch (Exception e) {
+                        } catch (HeadlessException e) {
                         } 
                     }  
                     break;
@@ -3589,7 +3784,7 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
                                     SimpanPenangananDokterPetugas();
                                 }
                             } 
-                        } catch (Exception e) {
+                        } catch (HeadlessException e) {
                         }                            
                     }  
                     break;
@@ -3689,20 +3884,30 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
         if(evt.getKeyCode()==KeyEvent.VK_SPACE){
             BtnSimpanActionPerformed(null);
         }else{
-            if(TabRawat.getSelectedIndex()==0){
-                Valid.pindah(evt,BtnSeekDokter,BtnBatal);
-            }else if(TabRawat.getSelectedIndex()==1){
-                Valid.pindah(evt,BtnSeekPetugas,BtnBatal);
-            }else if(TabRawat.getSelectedIndex()==2){
-                Valid.pindah(evt,BtnSeekPetugas2,BtnBatal);
-            }else if(TabRawat.getSelectedIndex()==3){
-                Valid.pindah(evt,TindakLanjut,BtnBatal);
-            }else if(TabRawat.getSelectedIndex()==4){
-                Valid.pindah(evt,cmbFeto,BtnBatal);
-            }else if(TabRawat.getSelectedIndex()==5){
-                Valid.pindah(evt,TCavumDouglas,BtnBatal);
-            }else if(TabRawat.getSelectedIndex()==8){
-                Valid.pindah(evt,Catatan,BtnBatal);
+            switch (TabRawat.getSelectedIndex()) {
+                case 0:
+                    Valid.pindah(evt,BtnSeekDokter,BtnBatal);
+                    break;
+                case 1:
+                    Valid.pindah(evt,BtnSeekPetugas,BtnBatal);
+                    break;
+                case 2:
+                    Valid.pindah(evt,BtnSeekPetugas2,BtnBatal);
+                    break;
+                case 3:
+                    Valid.pindah(evt,TindakLanjut,BtnBatal);
+                    break;
+                case 4:
+                    Valid.pindah(evt,cmbFeto,BtnBatal);
+                    break;
+                case 5:
+                    Valid.pindah(evt,TCavumDouglas,BtnBatal);
+                    break;
+                case 8:
+                    Valid.pindah(evt,Catatan,BtnBatal);
+                    break;
+                default:
+                    break;
             }
         }
 }//GEN-LAST:event_BtnSimpanKeyPressed
@@ -4208,47 +4413,53 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 }//GEN-LAST:event_BtnAllKeyPressed
 
     private void TCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TCariKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            TampilkanData();
-        }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            BtnCari.requestFocus();
-        }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
-            BtnKeluar.requestFocus();
-        }else if(evt.getKeyCode()==KeyEvent.VK_UP){
-            switch (TabRawat.getSelectedIndex()) {
-                case 0:
-                    if(TabRawatTindakanDokter.getSelectedIndex()==0){
-                        tbTindakan.requestFocus();
-                    }else if(TabRawatTindakanDokter.getSelectedIndex()==1){
-                        tbRawatDr.requestFocus();
-                    }
-                    break;
-                case 1:
-                    if(TabRawatTindakanPetugas.getSelectedIndex()==0){
-                        tbTindakan2.requestFocus();
-                    }else if(TabRawatTindakanPetugas.getSelectedIndex()==1){
-                        tbRawatPr.requestFocus();
-                    }
-                    break;
-                case 2:
-                    if(TabRawatTindakanDokterPetugas.getSelectedIndex()==0){
-                        tbTindakan3.requestFocus();
-                    }else if(TabRawatTindakanDokterPetugas.getSelectedIndex()==1){
-                        tbRawatDrPr.requestFocus();
-                    }
-                    break;
-                case 3:
-                    tbPemeriksaan.requestFocus();
-                    break;
-                case 4:
-                    tbPemeriksaanObstetri.requestFocus();
-                    break;
-                case 5:
-                    tbPemeriksaanGinekologi.requestFocus();
-                    break;
-                default:
-                    break;
-            }
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_ENTER:
+                TampilkanData();
+                break;
+            case KeyEvent.VK_PAGE_DOWN:
+                BtnCari.requestFocus();
+                break;
+            case KeyEvent.VK_PAGE_UP:
+                BtnKeluar.requestFocus();
+                break;
+            case KeyEvent.VK_UP:
+                switch (TabRawat.getSelectedIndex()) {
+                    case 0:
+                        if(TabRawatTindakanDokter.getSelectedIndex()==0){
+                            tbTindakan.requestFocus();
+                        }else if(TabRawatTindakanDokter.getSelectedIndex()==1){
+                            tbRawatDr.requestFocus();
+                        }
+                        break;
+                    case 1:
+                        if(TabRawatTindakanPetugas.getSelectedIndex()==0){
+                            tbTindakan2.requestFocus();
+                        }else if(TabRawatTindakanPetugas.getSelectedIndex()==1){
+                            tbRawatPr.requestFocus();
+                        }
+                        break;
+                    case 2:
+                        if(TabRawatTindakanDokterPetugas.getSelectedIndex()==0){
+                            tbTindakan3.requestFocus();
+                        }else if(TabRawatTindakanDokterPetugas.getSelectedIndex()==1){
+                            tbRawatDrPr.requestFocus();
+                        }
+                        break;
+                    case 3:
+                        tbPemeriksaan.requestFocus();
+                        break;
+                    case 4:
+                        tbPemeriksaanObstetri.requestFocus();
+                        break;
+                    case 5:
+                        tbPemeriksaanGinekologi.requestFocus();
+                        break;
+                    default:
+                        break;
+                }   break;
+            default:
+                break;
         }
 }//GEN-LAST:event_TCariKeyPressed
 
@@ -4384,12 +4595,16 @@ public final class DlgRawatJalan extends javax.swing.JDialog {
 }//GEN-LAST:event_tbRawatPrMouseClicked
 
 private void KdDokKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDokKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",TDokter,KdDok.getText());
-        }else if(evt.getKeyCode()==KeyEvent.VK_UP){
-            BtnSeekDokterActionPerformed(null);
-        }else{            
-            Valid.pindah(evt,TNoRw,BtnSeekDokter);
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",TDokter,KdDok.getText());
+                break;
+            case KeyEvent.VK_UP:
+                BtnSeekDokterActionPerformed(null);
+                break;
+            default:
+                Valid.pindah(evt,TNoRw,BtnSeekDokter);
+                break;
         }
 }//GEN-LAST:event_KdDokKeyPressed
 
@@ -4403,12 +4618,16 @@ private void BtnSeekDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 }//GEN-LAST:event_BtnSeekDokterActionPerformed
 
 private void kdptgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kdptgKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select nama from petugas where nip=?",TPerawat,kdptg.getText());
-        }else if(evt.getKeyCode()==KeyEvent.VK_UP){
-            BtnSeekPetugasActionPerformed(null);
-        }else{
-            Valid.pindah(evt,TNoRw,BtnSeekPetugas);
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                Sequel.cariIsi("select nama from petugas where nip=?",TPerawat,kdptg.getText());
+                break;
+            case KeyEvent.VK_UP:
+                BtnSeekPetugasActionPerformed(null);
+                break;
+            default:
+                Valid.pindah(evt,TNoRw,BtnSeekPetugas);
+                break;
         }
 }//GEN-LAST:event_kdptgKeyPressed
 
@@ -4567,13 +4786,17 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
     }//GEN-LAST:event_tbRawatDrPrMouseClicked
 
     private void kdptg2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kdptg2KeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select nama from petugas where nip=?",TPerawat2,kdptg2.getText());
-        }else if(evt.getKeyCode()==KeyEvent.VK_UP){
-            BtnSeekPetugas2ActionPerformed(null);
-        }else{
-            Valid.pindah(evt,KdDok2,BtnSeekPetugas2);
-        }    
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                Sequel.cariIsi("select nama from petugas where nip=?",TPerawat2,kdptg2.getText());
+                break;
+            case KeyEvent.VK_UP:
+                BtnSeekPetugas2ActionPerformed(null);
+                break;    
+            default:
+                Valid.pindah(evt,KdDok2,BtnSeekPetugas2);
+                break;
+        }
     }//GEN-LAST:event_kdptg2KeyPressed
 
     private void BtnSeekPetugas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSeekPetugas2ActionPerformed
@@ -4586,12 +4809,16 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
     }//GEN-LAST:event_BtnSeekPetugas2ActionPerformed
 
     private void KdDok2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDok2KeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",TDokter2,KdDok2.getText());
-        }else if(evt.getKeyCode()==KeyEvent.VK_UP){
-            BtnSeekDokter2ActionPerformed(null);
-        }else{            
-            Valid.pindah(evt,TNoRw,kdptg2);
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",TDokter2,KdDok2.getText());
+                break;
+            case KeyEvent.VK_UP:
+                BtnSeekDokter2ActionPerformed(null);
+                break;
+            default:
+                Valid.pindah(evt,TNoRw,kdptg2);
+                break;
         }
     }//GEN-LAST:event_KdDok2KeyPressed
 
@@ -5320,12 +5547,16 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
     }//GEN-LAST:event_tbCatatanKeyReleased
 
     private void KdDok3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDok3KeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",TDokter3,KdDok3.getText());
-        }else if(evt.getKeyCode()==KeyEvent.VK_UP){
-            BtnSeekDokter3ActionPerformed(null);
-        }else{            
-            Valid.pindah(evt,TNoRw,BtnSeekDokter3);
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_PAGE_DOWN:
+                Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",TDokter3,KdDok3.getText());
+                break;
+            case KeyEvent.VK_UP:
+                BtnSeekDokter3ActionPerformed(null);
+                break;
+            default:
+                Valid.pindah(evt,TNoRw,BtnSeekDokter3);
+                break;
         }
     }//GEN-LAST:event_KdDok3KeyPressed
 
@@ -5726,7 +5957,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rs.getString(8),rs.getDouble(9),rs.getString("kd_jenis_prw"),rs.getString("tarif_tindakandr"),rs.getString("kso")
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             } finally{
                 if(rs!=null){
@@ -5736,7 +5967,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps.close();
                 }
             }           
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+tabModeDr.getRowCount());
@@ -5821,7 +6052,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                                    rs.getString("kso")
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             } finally{
                 if(rs!=null){
@@ -5831,7 +6062,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps2.close();
                 }
             }                  
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+tabModePr.getRowCount());
@@ -5917,7 +6148,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rs.getString("tarif_tindakandr"),rs.getString("tarif_tindakanpr"),rs.getString("kso")
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             } finally{
                 if(rs!=null){
@@ -5927,7 +6158,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps3.close();
                 }
             }              
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+tabModeDrPr.getRowCount());
@@ -6104,7 +6335,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rs.getString(16),rs.getString(17),rs.getString(18)
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             } finally{
                 if(rs!=null){
@@ -6114,7 +6345,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps4.close();
                 }
             }                  
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+tabModePemeriksaan.getRowCount());
@@ -6172,7 +6403,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                                    rs.getString(8)
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi Catatan : "+e);
             } finally{
                 if(rs!=null){
@@ -6182,7 +6413,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps4.close();
                 }
             }                  
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+TabModeCatatan.getRowCount());
@@ -6285,7 +6516,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rs.getString("feto")
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);    
             } finally {
                 if(rs!=null) {
@@ -6295,7 +6526,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps5.close();
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Notifikasi :" +e);
         }
         LCount.setText(""+tabModeObstetri.getRowCount());
@@ -6489,7 +6720,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rs.getString("cavum_douglas")
                     });
                 }
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);    
             } finally {
                 if(rs!=null) {
@@ -6499,7 +6730,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     ps5.close();
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Notifikasi :" +e);
         }
         LCount.setText(""+tabModeGinekologi.getRowCount());
@@ -6684,7 +6915,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rstindakan.getDouble("menejemen")
                     });    
                 }                   
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             }finally{
                 if(rstindakan != null){
@@ -6694,7 +6925,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     pstindakan.close();
                 }
             }
-        }catch(Exception e){
+        }catch(NumberFormatException | SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+TabModeTindakan.getRowCount());
@@ -6836,7 +7067,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rstindakan.getDouble("menejemen")
                     });        
                 }                      
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             }finally{
                 if(rstindakan != null){
@@ -6846,7 +7077,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     pstindakan.close();
                 }
             }
-        }catch(Exception e){
+        }catch(NumberFormatException | SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+TabModeTindakan2.getRowCount());
@@ -6988,7 +7219,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                         rstindakan.getDouble("menejemen")
                     });    
                 }   
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 System.out.println("Notifikasi : "+e);
             }finally{
                 if(rstindakan != null){
@@ -6998,7 +7229,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                     pstindakan.close();
                 }
             }
-        }catch(Exception e){
+        }catch(NumberFormatException | SQLException e){
             System.out.println("Notifikasi : "+e);
         }
         LCount.setText(""+TabModeTindakan3.getRowCount());
@@ -7072,7 +7303,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 }                           
             }
             koneksi.setAutoCommit(true);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Notif : "+e);
         }
     }
@@ -7093,7 +7324,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 }                           
             }
             koneksi.setAutoCommit(true);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Notif : "+e);
         }
     }
@@ -7115,7 +7346,7 @@ private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
                 }                           
             }
             koneksi.setAutoCommit(true);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("Notif : "+e);
         }
     }
