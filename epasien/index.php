@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    date_default_timezone_set('Asia/Jakarta');
     session_start();
     require_once('conf/command.php');
     require_once('conf/conf.php');
@@ -56,9 +57,10 @@
      <link rel="stylesheet" href="css/owl.carousel.css"/>
      <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
      <link rel="stylesheet" href="css/tooplate-style.css"/>
-     <link rel="stylesheet" href="plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"/>
-     <script type="text/javascript" src="plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
-     <script type="text/javascript" src="conf/validator.js"></script>
+     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" type="text/css">
+     <script src="conf/validator.js" type="text/javascript"></script>
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap-datepicker.min.js" type="text/javascript"></script>
      <script src="js/jquery.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/jquery.sticky.js"></script>
@@ -76,11 +78,10 @@
         });
         
         $(function(){
-            $(".datepicker").bootstrapMaterialDatePicker({
-                format: 'YYYY-MM-DD',
-                clearButton: true,
-                weekStart: 1,
-                time: false
+            $(".datepicker").datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                todayHighlight: true
             });
         });
         
