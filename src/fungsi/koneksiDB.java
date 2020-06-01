@@ -231,7 +231,17 @@ public class koneksiDB {
         }
         return var;
     }
-
+    
+    public static String ALARMBOOKINGPERIKSA(){
+        try{
+            prop.loadFromXML(new FileInputStream("setting/database.xml"));
+            var=prop.getProperty("ALARMBOOKINGPERIKSA");
+        }catch(Exception e){
+            var=""; 
+        }
+        return var;
+    }
+    
     public static String MENUTRANSPARAN(){
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
