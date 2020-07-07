@@ -2,11 +2,11 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <comment>KhanzaHMS</comment> 
-    <entry key="HOST">5k7+C7EnUw9nUv2Nix+DBA==</entry>
-    <entry key="DATABASE">AZHNccBwSmSho84f+X8GyQ==</entry>
+    <entry key="HOST">a3sv1q7fw3mv84nqAc2DbA==</entry>
+    <entry key="DATABASE">9KPjKsUL9MTM5i00TRJJ/w==</entry>
     <entry key="PORT">nioxtijcpDaKSUiUiP5FAg==</entry>
-    <entry key="USER">kMR3WfAwUK6MbhCyydxa0g==</entry>
-    <entry key="PAS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="USER">AqOU3p5RZEIAk8HazTrV+Q==</entry>
+    <entry key="PAS">t5r12Z3IjcViGUbZOD+OHw==</entry>
     <entry key="CARICEPAT">nonaktif</entry>
     <entry key="HOSTHYBRIDWEB">5k7+C7EnUw9nUv2Nix+DBA==</entry>
     <entry key="HYBRIDWEB">webapps</entry>
@@ -19,14 +19,13 @@
     <entry key="ALARMRADIOLOGI">yes</entry>
     <entry key="FORMALARMRADIOLOGI">ralan + ranap</entry>
     <entry key="ALARMRSISRUTE">yes</entry>
-    <entry key="ALARMBOOKINGPERIKSA">yes</entry>
     <entry key="MENUTRANSPARAN">yes</entry>
     <entry key="URLAPIBPJS">https://new-api.bpjs-kesehatan.go.id:8080/new-vclaim-rest</entry>
-    <entry key="SECRETKEYAPIBPJS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
-    <entry key="CONSIDAPIBPJS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="SECRETKEYAPIBPJS">/1l6cWkcdp0Ao1gOH5fSOw==</entry>
+    <entry key="CONSIDAPIBPJS">3+KwXDr1l3hviDKGIzw41A==</entry>
     <entry key="URLAPIAPLICARE">https://new-api.bpjs-kesehatan.go.id/aplicaresws</entry>
-    <entry key="SECRETKEYAPIAPLICARE">4NNwqTdoTqRShdDlorgE5A==</entry>
-    <entry key="CONSIDAPIAPLICARE">xpAVcYWj1J/dXthnAj4TZQ==</entry>
+    <entry key="SECRETKEYAPIAPLICARE">/1l6cWkcdp0Ao1gOH5fSOw==</entry>
+    <entry key="CONSIDAPIAPLICARE">3+KwXDr1l3hviDKGIzw41A==</entry>
     <entry key="URLAPIPCARE">https://dvlp.bpjs-kesehatan.go.id:9081/pcare-rest-v3.0</entry>
     <entry key="SECRETKEYAPIPCARE">XDsZgrgdYZ6W9yEhVJnmKw==</entry>
     <entry key="CONSIDAPIPCARE">biB6o2K89ajom39B15pxFA==</entry>
@@ -45,7 +44,7 @@
     <entry key="PASSSITT">gILNCSeqFSr4Hvjwkpqrow==</entry>
     <entry key="URLAPICORONA">http://sirs.yankes.kemkes.go.id/fo/index.php</entry>
     <entry key="IDCORONA">EXbXbvGwMp9CpQ1s9K748A==</entry>
-    <entry key="PASSCORONA">wesRGhsjqnfiOoXWuqoTjw==</entry>
+    <entry key="PASSCORONA">gILNCSeqFSr4Hvjwkpqrow==</entry>
     <entry key="KABUPATENSITT">12345</entry>
     <entry key="KAMARAKTIFRANAP"></entry>
     <entry key="DOKTERAKTIFKASIRRALAN"></entry>
