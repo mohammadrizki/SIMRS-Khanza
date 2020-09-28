@@ -521,7 +521,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
         CmbCrStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
         CmbCrStts.setLightWeightPopupEnabled(false);
         CmbCrStts.setName("CmbCrStts"); // NOI18N
-        CmbCrStts.setPreferredSize(new java.awt.Dimension(120, 23));
+        CmbCrStts.setPreferredSize(new java.awt.Dimension(130, 23));
         CmbCrStts.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cmbCrJkItemStateChanged(evt);
@@ -548,7 +548,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
         panelGlass9.add(jLabel6);
 
         TCari.setName("TCari"); // NOI18N
-        TCari.setPreferredSize(new java.awt.Dimension(250, 23));
+        TCari.setPreferredSize(new java.awt.Dimension(240, 23));
         TCari.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TCariKeyPressed(evt);
@@ -651,7 +651,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
         jLabel13.setBounds(0, 102, 105, 23);
 
         DTPLahir.setForeground(new java.awt.Color(50, 70, 50));
-        DTPLahir.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "27-02-2019" }));
+        DTPLahir.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "15-08-2020" }));
         DTPLahir.setDisplayFormat("dd-MM-yyyy");
         DTPLahir.setName("DTPLahir"); // NOI18N
         DTPLahir.setOpaque(false);
@@ -682,7 +682,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
         jLabel19.setText("Stts. Nikah :");
         jLabel19.setName("jLabel19"); // NOI18N
         FormInput.add(jLabel19);
-        jLabel19.setBounds(646, 12, 100, 23);
+        jLabel19.setBounds(636, 12, 100, 23);
 
         CmbStts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KAWIN", "BELUM KAWIN", "CERAI HIDUP", "CERAI MATI" }));
         CmbStts.setLightWeightPopupEnabled(false);
@@ -693,7 +693,7 @@ public final class DlgPetugas extends javax.swing.JDialog {
             }
         });
         FormInput.add(CmbStts);
-        CmbStts.setBounds(750, 12, 125, 23);
+        CmbStts.setBounds(740, 12, 135, 23);
 
         jLabel20.setText("Alamat :");
         jLabel20.setName("jLabel20"); // NOI18N
