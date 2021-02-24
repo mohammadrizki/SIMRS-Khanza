@@ -713,8 +713,8 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[A]Diet Pasien",rs.getBoolean("diet_pasien")});
                     }
                     
-                    if("[A]Periksa Lab PK".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[A]Periksa Lab PK",rs.getBoolean("periksa_lab")});
+                    if("[A]Periksa Lab".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[A]Periksa Lab",rs.getBoolean("periksa_lab")});
                     }
                     
                     if("[A]Periksa Radiologi".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -809,8 +809,8 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[A]Booking Periksa",rs.getBoolean("booking_periksa")});
                     }
                     
-                    if("[A]Periksa Lab PA".toLowerCase().contains(TCari.getText().toLowerCase())){
-                        tabMode.addRow(new Object[]{false,"[A]Periksa Lab PA",rs.getBoolean("pemeriksaan_lab_pa")});
+                    if("[A]Periksa Lab Deskriptif".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[A]Periksa Lab Deskriptif",rs.getBoolean("pemeriksaan_lab_pa")});
                     }
                     
                     if("[B]Barcode Ralan".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -3504,7 +3504,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","diet_pasien='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
-            if("[A]Periksa Lab PK".equals(tbUser.getValueAt(i,1).toString())){
+            if("[A]Periksa Lab".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","periksa_lab='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 
@@ -3600,7 +3600,7 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","booking_periksa='"+tbUser.getValueAt(i,2).toString()+"'");
             }
             
-            if("[A]Periksa Lab PA".equals(tbUser.getValueAt(i,1).toString())){
+            if("[A]Periksa Lab Deskriptif".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pemeriksaan_lab_pa='"+tbUser.getValueAt(i,2).toString()+"'");
             }
 

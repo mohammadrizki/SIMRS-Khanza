@@ -799,7 +799,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(BtnCari3);
         BtnCari3.setBounds(744, 130, 28, 23);
 
-        jLabel13.setText("Dengan Diagnosa PA :");
+        jLabel13.setText("Dengan Hasil Pemeriksaan :");
         jLabel13.setName("jLabel13"); // NOI18N
         panelGlass12.add(jLabel13);
         jLabel13.setBounds(309, 100, 120, 23);
@@ -877,7 +877,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(TanggalPA);
         TanggalPA.setBounds(682, 70, 90, 23);
 
-        jLabel18.setText("Pernah Dilakukan PA Di :");
+        jLabel18.setText("Pernah Periksa di :");
         jLabel18.setName("jLabel18"); // NOI18N
         panelGlass12.add(jLabel18);
         jLabel18.setBounds(0, 70, 165, 23);
@@ -935,7 +935,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(NomorPA);
         NomorPA.setBounds(168, 100, 130, 23);
 
-        jLabel21.setText("Dengan Nomor PA :");
+        jLabel21.setText("Nomor Slide :");
         jLabel21.setName("jLabel21"); // NOI18N
         panelGlass12.add(jLabel21);
         jLabel21.setBounds(25, 100, 140, 23);
@@ -2105,7 +2105,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                         })==true){
                         for(i=0;i<tbTarif2.getRowCount();i++){ 
                             if(tbTarif2.getValueAt(i,0).toString().equals("true")){
-                                Sequel.menyimpan2("permintaan_pemeriksaan_labpa","?,?,?","pemeriksaan lab PA",3,new String[]{
+                                Sequel.menyimpan2("permintaan_pemeriksaan_labpa","?,?,?","pemeriksaan Lab Deskriptif",3,new String[]{
                                     TNoPermintaan2.getText(),tbTarif2.getValueAt(i,1).toString(),"Belum"
                                 });
                             }                        
@@ -2122,7 +2122,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                         })==true){
                             for(i=0;i<tbTarif2.getRowCount();i++){ 
                                 if(tbTarif2.getValueAt(i,0).toString().equals("true")){
-                                    Sequel.menyimpan2("permintaan_pemeriksaan_labpa","?,?,?","pemeriksaan lab PA",3,new String[]{
+                                    Sequel.menyimpan2("permintaan_pemeriksaan_labpa","?,?,?","pemeriksaan Lab Deskriptif",3,new String[]{
                                         TNoPermintaan2.getText(),tbTarif2.getValueAt(i,1).toString(),"Belum"
                                     });
                                 }                        
@@ -2139,7 +2139,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                             })==true){
                                 for(i=0;i<tbTarif2.getRowCount();i++){ 
                                     if(tbTarif2.getValueAt(i,0).toString().equals("true")){
-                                        Sequel.menyimpan2("permintaan_pemeriksaan_labpa","?,?,?","pemeriksaan lab PA",3,new String[]{
+                                        Sequel.menyimpan2("permintaan_pemeriksaan_labpa","?,?,?","pemeriksaan Lab Deskriptif",3,new String[]{
                                             TNoPermintaan2.getText(),tbTarif2.getValueAt(i,1).toString(),"Belum"
                                         });
                                     }                        

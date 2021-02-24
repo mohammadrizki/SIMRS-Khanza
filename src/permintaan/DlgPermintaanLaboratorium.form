@@ -1021,7 +1021,7 @@
                         </Component>
                         <Component class="widget.Label" name="jLabel13">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Dengan Diagnosa PA :"/>
+                            <Property name="text" type="java.lang.String" value="Dengan Hasil Pemeriksaan :"/>
                             <Property name="name" type="java.lang.String" value="jLabel13" noResource="true"/>
                           </Properties>
                           <Constraints>
@@ -1163,7 +1163,7 @@
                         </Component>
                         <Component class="widget.Label" name="jLabel18">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Pernah Dilakukan PA Di :"/>
+                            <Property name="text" type="java.lang.String" value="Pernah Periksa di :"/>
                             <Property name="name" type="java.lang.String" value="jLabel18" noResource="true"/>
                           </Properties>
                           <Constraints>
@@ -1267,7 +1267,7 @@
                         </Component>
                         <Component class="widget.Label" name="jLabel21">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Dengan Nomor PA :"/>
+                            <Property name="text" type="java.lang.String" value="Nomor Slide :"/>
                             <Property name="name" type="java.lang.String" value="jLabel21" noResource="true"/>
                           </Properties>
                           <Constraints>

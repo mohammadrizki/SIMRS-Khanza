@@ -258,7 +258,7 @@
 					<font fontName="Tahoma" size="8"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Dengan Diagnosa PA]]></text>
+				<text><![CDATA[Dengan Hasil Pemeriksaan]]></text>
 			</staticText>
 			<staticText>
 				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1177" y="0" width="48" height="18" forecolor="#000000" backcolor="#F0F0DC" uuid="194a8261-0726-4dd9-af71-8d2e377863cc">
@@ -312,7 +312,7 @@
 					<font fontName="Tahoma" size="8"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Pernah Dilakukan PA Di]]></text>
+				<text><![CDATA[Pernah Periksa di]]></text>
 			</staticText>
 			<staticText>
 				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1670" y="0" width="52" height="18" forecolor="#000000" backcolor="#F0F0DC" uuid="7d0d7a92-6653-4a19-a075-33eec4bf7f7d">
@@ -334,7 +334,7 @@
 					<font fontName="Tahoma" size="8"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Dengan Nomor PA]]></text>
+				<text><![CDATA[Nomor Slide]]></text>
 			</staticText>
 			<staticText>
 				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="915" y="0" width="83" height="18" forecolor="#000000" backcolor="#F0F0DC" uuid="1d7a03df-8b64-4828-b961-78218740e63b"/>

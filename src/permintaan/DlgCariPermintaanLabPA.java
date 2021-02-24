@@ -61,7 +61,7 @@ public class DlgCariPermintaanLabPA extends javax.swing.JDialog {
             "No.Permintaan","No.Rawat","Pasien","Permintaan","Jam","Sampel","Jam","Hasil","Jam",
             "Kode Dokter","Dokter Perujuk","Poli Registrasi","Informasi Tambahan","Diagnosis Klinis",
             "Kode Bayar","Jenis Bayar","Tgl.Bahan","Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan",
-            "Pernah Dilakukan PA Di","Pada Tanggal","Dengan Nomor PA","Dengan Diagnosa PA","Permintaan Pemeriksaan"
+            "Pernah Periksa di","Pada Tanggal","Nomor Slide","Dengan Hasil Pemeriksaan","Permintaan Pemeriksaan"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
@@ -132,7 +132,7 @@ public class DlgCariPermintaanLabPA extends javax.swing.JDialog {
                 "No.Permintaan","No.Rawat","Pasien","Pemeriksaan","Permintaan","Jam","Sampel","Jam","Hasil",
                 "Jam","Kode Dokter","Dokter Perujuk","Poli Registrasi","Informasi Tambahan","Diagnosis Klinis","Kode Bayar","Jenis Bayar",
                 "Tgl.Bahan","Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan",
-            "Pernah Dilakukan PA Di","Pada Tanggal","Dengan Nomor PA","Dengan Diagnosa PA"
+            "Pernah Periksa di","Pada Tanggal","Nomor Slide","Dengan Hasil Pemeriksaan"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
@@ -202,8 +202,8 @@ public class DlgCariPermintaanLabPA extends javax.swing.JDialog {
         tabMode3=new DefaultTableModel(null,new Object[]{
             "No.Permintaan","No.Rawat","Pasien","Permintaan","Jam","Sampel","Jam","Hasil","Jam","Kode Dokter",
             "Dokter Perujuk","Kamar Terakhir","Informasi Tambahan","Diagnosis Klinis","Kode Bayar","Jenis Bayar",
-            "Tgl.Bahan","Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan","Pernah Dilakukan PA Di","Pada Tanggal",
-            "Dengan Nomor PA","Dengan Diagnosa PA","Permintaan Pemeriksaan"
+            "Tgl.Bahan","Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan","Pernah Periksa di","Pada Tanggal",
+            "Nomor Slide","Dengan Hasil Pemeriksaan","Permintaan Pemeriksaan"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
@@ -273,8 +273,8 @@ public class DlgCariPermintaanLabPA extends javax.swing.JDialog {
         tabMode4=new DefaultTableModel(null,new Object[]{
                 "No.Permintaan","No.Rawat","Pasien","Pemeriksaan","Permintaan","Jam","Sampel","Jam","Hasil","Jam","Kode Dokter",
                 "Dokter Perujuk","Kamar Terakhir","Informasi Tambahan","Diagnosis Klinis","Kode Bayar","Jenis Bayar","Tgl.Bahan",
-                "Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan","Pernah Dilakukan PA Di","Pada Tanggal",
-                "Dengan Nomor PA","Dengan Diagnosa PA"
+                "Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan","Pernah Periksa di","Pada Tanggal",
+                "Nomor Slide","Dengan Hasil Pemeriksaan"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };

@@ -981,7 +981,7 @@ public class DlgBilingRanap extends javax.swing.JDialog {
         MnPeriksaLab.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnPeriksaLab.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnPeriksaLab.setText("Input Periksa Lab PK");
+        MnPeriksaLab.setText("Input Periksa Lab");
         MnPeriksaLab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaLab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaLab.setName("MnPeriksaLab"); // NOI18N
@@ -997,7 +997,7 @@ public class DlgBilingRanap extends javax.swing.JDialog {
         MnPeriksaLabPA.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnPeriksaLabPA.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaLabPA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnPeriksaLabPA.setText("Input Periksa Lab PA");
+        MnPeriksaLabPA.setText("Input Periksa Lab Deskriptif");
         MnPeriksaLabPA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaLabPA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaLabPA.setName("MnPeriksaLabPA"); // NOI18N
@@ -1173,7 +1173,7 @@ public class DlgBilingRanap extends javax.swing.JDialog {
         MnCariPeriksaLab.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnCariPeriksaLab.setForeground(new java.awt.Color(50, 50, 50));
         MnCariPeriksaLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnCariPeriksaLab.setText("Data Pemeriksaan Lab PK");
+        MnCariPeriksaLab.setText("Data Pemeriksaan Lab");
         MnCariPeriksaLab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnCariPeriksaLab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnCariPeriksaLab.setName("MnCariPeriksaLab"); // NOI18N
@@ -1189,7 +1189,7 @@ public class DlgBilingRanap extends javax.swing.JDialog {
         MnCariPeriksaLabPA.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnCariPeriksaLabPA.setForeground(new java.awt.Color(50, 50, 50));
         MnCariPeriksaLabPA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnCariPeriksaLabPA.setText("Data Pemeriksaan Lab PA");
+        MnCariPeriksaLabPA.setText("Data Pemeriksaan Lab Deskriptif");
         MnCariPeriksaLabPA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnCariPeriksaLabPA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnCariPeriksaLabPA.setName("MnCariPeriksaLabPA"); // NOI18N

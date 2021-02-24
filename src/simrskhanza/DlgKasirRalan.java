@@ -1126,7 +1126,7 @@ public final class DlgKasirRalan extends javax.swing.JDialog {
         MnPeriksaLab.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnPeriksaLab.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnPeriksaLab.setText("Periksa Lab PK");
+        MnPeriksaLab.setText("Periksa Lab");
         MnPeriksaLab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaLab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaLab.setName("MnPeriksaLab"); // NOI18N
@@ -1142,7 +1142,7 @@ public final class DlgKasirRalan extends javax.swing.JDialog {
         MnPeriksaLabPA.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnPeriksaLabPA.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaLabPA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnPeriksaLabPA.setText("Periksa Lab PA");
+        MnPeriksaLabPA.setText("Periksa Lab Deskriptif");
         MnPeriksaLabPA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaLabPA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaLabPA.setName("MnPeriksaLabPA"); // NOI18N
