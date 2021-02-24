@@ -148,7 +148,11 @@ public final class akses {
             permintaan_stok_obat_pasien=false,pemeliharaan_inventaris=false,klasifikasi_pasien_ranap=false,bulanan_klasifikasi_pasien_ranap,
             harian_klasifikasi_pasien_ranap=false,klasifikasi_pasien_perbangsal=false,soap_perawatan=false,klaim_rawat_jalan=false,
             skrining_gizi=false,lama_penyiapan_rm=false,dosis_radiologi=false,demografi_umur_kunjungan=false,jam_diet_pasien=false,
-            rvu_bpjs=false,verifikasi_penerimaan_farmasi=false,verifikasi_penerimaan_logistik=false,pemeriksaan_lab_pa=false,ringkasan_pengajuan_obat=false;
+            rvu_bpjs=false,verifikasi_penerimaan_farmasi=false,verifikasi_penerimaan_logistik=false,pemeriksaan_lab_pa=false,ringkasan_pengajuan_obat=false,
+            ringkasan_pemesanan_obat=false,ringkasan_pengadaan_obat=false,ringkasan_penerimaan_obat=false,ringkasan_hibah_obat=false,
+            ringkasan_penjualan_obat=false,ringkasan_beri_obat=false,ringkasan_piutang_obat=false,ringkasan_stok_keluar_obat=false,
+            ringkasan_retur_suplier_obat=false,ringkasan_retur_pembeli_obat=false,penilaian_awal_keperawatan_ranapkebidanan=false,
+            ringkasan_pengajuan_nonmedis=false;
     
     public static void setData(String user, String pass) {
        try {                
@@ -851,6 +855,18 @@ public final class akses {
                         akses.verifikasi_penerimaan_logistik=true;
                         akses.pemeriksaan_lab_pa=true;
                         akses.ringkasan_pengajuan_obat=true;
+                        akses.ringkasan_pemesanan_obat=true;
+                        akses.ringkasan_pengadaan_obat=true;
+                        akses.ringkasan_penerimaan_obat=true;
+                        akses.ringkasan_hibah_obat=true;
+                        akses.ringkasan_penjualan_obat=true;
+                        akses.ringkasan_beri_obat=true;
+                        akses.ringkasan_piutang_obat=true;
+                        akses.ringkasan_stok_keluar_obat=true;
+                        akses.ringkasan_retur_suplier_obat=true;
+                        akses.ringkasan_retur_pembeli_obat=true;
+                        akses.penilaian_awal_keperawatan_ranapkebidanan=true;
+                        akses.ringkasan_pengajuan_nonmedis=true;
                     }else if(rs2.getRow()>=1){   
                         rs2.beforeFirst();
                         rs2.next();
@@ -1537,6 +1553,18 @@ public final class akses {
                         akses.verifikasi_penerimaan_logistik=rs2.getBoolean("verifikasi_penerimaan_logistik");
                         akses.pemeriksaan_lab_pa=rs2.getBoolean("pemeriksaan_lab_pa");
                         akses.ringkasan_pengajuan_obat=rs2.getBoolean("ringkasan_pengajuan_obat");
+                        akses.ringkasan_pemesanan_obat=rs2.getBoolean("ringkasan_pemesanan_obat");
+                        akses.ringkasan_pengadaan_obat=rs2.getBoolean("ringkasan_pengadaan_obat");
+                        akses.ringkasan_penerimaan_obat=rs2.getBoolean("ringkasan_penerimaan_obat");
+                        akses.ringkasan_hibah_obat=rs2.getBoolean("ringkasan_hibah_obat");
+                        akses.ringkasan_penjualan_obat=rs2.getBoolean("ringkasan_penjualan_obat");
+                        akses.ringkasan_beri_obat=rs2.getBoolean("ringkasan_beri_obat");
+                        akses.ringkasan_piutang_obat=rs2.getBoolean("ringkasan_piutang_obat");
+                        akses.ringkasan_stok_keluar_obat=rs2.getBoolean("ringkasan_stok_keluar_obat");
+                        akses.ringkasan_retur_suplier_obat=rs2.getBoolean("ringkasan_retur_suplier_obat");
+                        akses.ringkasan_retur_pembeli_obat=rs2.getBoolean("ringkasan_retur_pembeli_obat");
+                        akses.penilaian_awal_keperawatan_ranapkebidanan=rs2.getBoolean("penilaian_awal_keperawatan_ranapkebidanan");
+                        akses.ringkasan_pengajuan_nonmedis=rs2.getBoolean("ringkasan_pengajuan_nonmedis");
                     }else if((rs.getRow()==0)&&(rs2.getRow()==0)){
                         akses.kode="";                  
                         akses.penyakit= false;
@@ -2221,6 +2249,18 @@ public final class akses {
                         akses.verifikasi_penerimaan_logistik=false;
                         akses.pemeriksaan_lab_pa=false;
                         akses.ringkasan_pengajuan_obat=false;
+                        akses.ringkasan_pemesanan_obat=false;
+                        akses.ringkasan_pengadaan_obat=false;
+                        akses.ringkasan_penerimaan_obat=false;
+                        akses.ringkasan_hibah_obat=false;
+                        akses.ringkasan_penjualan_obat=false;
+                        akses.ringkasan_beri_obat=false;
+                        akses.ringkasan_piutang_obat=false;
+                        akses.ringkasan_stok_keluar_obat=false;
+                        akses.ringkasan_retur_suplier_obat=false;
+                        akses.ringkasan_retur_pembeli_obat=false;
+                        akses.penilaian_awal_keperawatan_ranapkebidanan=false;
+                        akses.ringkasan_pengajuan_nonmedis=false;
                     }
                 } catch (Exception e) {
                     System.out.println("Notifikasi : "+e);
@@ -2960,4 +3000,16 @@ public final class akses {
     public static boolean getverifikasi_penerimaan_logistik(){return akses.verifikasi_penerimaan_logistik;}
     public static boolean getpemeriksaan_lab_pa(){return akses.pemeriksaan_lab_pa;}
     public static boolean getringkasan_pengajuan_obat(){return akses.ringkasan_pengajuan_obat;}
+    public static boolean getringkasan_pemesanan_obat(){return akses.ringkasan_pemesanan_obat;}
+    public static boolean getringkasan_pengadaan_obat(){return akses.ringkasan_pengadaan_obat;}
+    public static boolean getringkasan_penerimaan_obat(){return akses.ringkasan_penerimaan_obat;}
+    public static boolean getringkasan_hibah_obat(){return akses.ringkasan_hibah_obat;}
+    public static boolean getringkasan_penjualan_obat(){return akses.ringkasan_penjualan_obat;}
+    public static boolean getringkasan_beri_obat(){return akses.ringkasan_beri_obat;}
+    public static boolean getringkasan_piutang_obat(){return akses.ringkasan_piutang_obat;}
+    public static boolean getringkasan_stok_keluar_obat(){return akses.ringkasan_stok_keluar_obat;}
+    public static boolean getringkasan_retur_suplier_obat(){return akses.ringkasan_retur_suplier_obat;}
+    public static boolean getringkasan_retur_pembeli_obat(){return akses.ringkasan_retur_pembeli_obat;}
+    public static boolean getpenilaian_awal_keperawatan_ranapkebidanan(){return akses.penilaian_awal_keperawatan_ranapkebidanan;}
+    public static boolean getringkasan_pengajuan_nonmedis(){return akses.ringkasan_pengajuan_nonmedis;}
 }   
