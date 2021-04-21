@@ -351,13 +351,9 @@ public final class BPJSCekReferensiSpesialistikKontrol extends javax.swing.JDial
         return tbKamar;
     }
     
-    public void SetKontrol(String nokartu,String nosep,String jeniskontrol,String tanggalkontrol){
+    public void SetKontrol(String nomor,String jeniskontrol,String tanggalkontrol){
         TanggalKontrol.setText(tanggalkontrol);
         JenisKontrol.setText(jeniskontrol);
-        if(jeniskontrol.equals("1: Rencana Kontrol")){
-            Nomor.setText(nokartu);
-        }else if(jeniskontrol.equals("2: SPRI")){
-            Nomor.setText(nosep);
-        }
+        Nomor.setText(nomor);
     }
 }
