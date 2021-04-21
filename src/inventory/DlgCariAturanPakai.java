@@ -315,9 +315,8 @@ public final class DlgCariAturanPakai extends javax.swing.JDialog {
 
     private void BtnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTambahActionPerformed
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        DlgKategori nama=new DlgKategori(null,false);
+        DlgAturanPakai nama=new DlgAturanPakai(null,false);
         nama.emptTeks();
-        nama.isCek();
         nama.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
         nama.setLocationRelativeTo(internalFrame1);
         nama.setAlwaysOnTop(false);
@@ -418,7 +417,11 @@ public final class DlgCariAturanPakai extends javax.swing.JDialog {
             }
             myObj.close();
         } catch (Exception ex) {
-            System.out.println("Notifikasi : Data tidak ditemukan..!!");
+            if(ex.toString().contains("begin")){
+                System.out.println("Notifikasi : Data tidak ditemukan..!!");
+            }else{
+                System.out.println("Notifikasi : "+ex);
+            }
         }
     }
 
